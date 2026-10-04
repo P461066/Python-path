@@ -1,3 +1,3 @@
 name = "Pablo"
-age = 20 
-print(f"{name} is {age}")
+age = 20
+print(f"My name is {name} and I am {age} years old.")
