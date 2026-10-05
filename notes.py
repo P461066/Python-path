@@ -539,6 +539,13 @@ fruits_veg = Fruits[:]
 fruits_veg.append('potatoes')
 pritn(fruits_veg) # ['apple', 'banana', 'orange', 'potatoes'}
 
+# Creating alisas(variable names that point to the same list)
+colors = ['red', 'orange', 'purple']
+hues = colors
+hues.append('blue')
+print(hues) # ['red', 'orange', 'purple', 'blue']
+print(colors) # ['red', 'orange', 'purple', 'blue']
+
 # ====================================
 # 📅 DAY 16 - 23 September 2026
 # ====================================
