@@ -533,6 +533,12 @@ scores = [7, 3, 9, 1]
 scores.sort()
 print(scores)  # [1, 3, 7, 9]
 
+# cloning a list [:]
+Fruits = ["apple", "banana", "orange"]
+fruits_veg = Fruits[:]
+fruits_veg.append('potatoes')
+pritn(fruits_veg) # ['apple', 'banana', 'orange', 'potatoes'}
+
 # ====================================
 # 📅 DAY 16 - 23 September 2026
 # ====================================
