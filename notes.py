@@ -814,6 +814,91 @@ print(f"Pi with 4 decimals: {pi:.4f}")
 # SAFE DEMO RUNNER
 # ====================================
 
+# ====================================
+# 📅 DAY 22 - 09 October 2026
+# ====================================
+
+# --- 23. DICTIONARIES ---
+# A dictionary stores data in key-value pairs.
+# Syntax:
+# {"key": "value"}
+
+# Example:
+student = {
+    "name": "Pablo",
+    "age": 20,
+    "course": "Python"
+}
+
+print(student)  # {'name': 'Pablo', 'age': 20, 'course': 'Python'}
+
+# Access a value using its key:
+print(student["name"])  # Pablo
+print(student["age"])   # 20
+
+# Add a new key-value pair:
+student["city"] = "Lagos"
+print(student)
+
+# Update a value:
+student["age"] = 21
+print(student["age"])  # 21
+
+# Remove a key:
+student.pop("course")
+print(student)
+
+# Loop through keys:
+for key in student:
+    print(key)
+
+# Loop through values:
+for value in student.values():
+    print(value)
+
+# Loop through key-value pairs:
+for key, value in student.items():
+    print(key, value)
+
+# A dictionary can store other data types too:
+grades = {
+    "math": 90,
+    "science": 85,
+    "history": 88
+}
+
+print(grades["math"])  # 90
+
+# Nested dictionary:
+student_profile = {
+    "name": "Pablo",
+    "grades": {
+        "math": 90,
+        "science": 85
+    }
+}
+
+print(student_profile["grades"]["math"])  # 90
+
+# Common dictionary methods:
+# keys() -> returns all keys
+# values() -> returns all values
+# items() -> returns key-value pairs
+# get() -> gets a value safely
+# pop() -> removes and returns a value
+
+print(student.keys())
+print(student.values())
+print(student.items())
+
+print(student.get("name"))  # Pablo
+
+# Summary:
+# - Dictionaries store data as key-value pairs
+# - Keys are unique
+# - Values can be strings, numbers, lists, or even other dictionaries
+# - They are useful for storing related information
+
 
 def _demo():
     # List example
