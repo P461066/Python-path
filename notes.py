@@ -25,6 +25,7 @@
 # DAY 19 - List Manipulation Operators & Slicing
 # DAY 20 - Membership Operators & List Manipulation
 # DAY 21 - F-Strings
+# DAY 22 - Dictionary
 # CURRENT TOPIC - F-Strings & String Formatting
 
 # ====================================
