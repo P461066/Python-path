@@ -25,8 +25,8 @@
 # DAY 19 - List Manipulation Operators & Slicing
 # DAY 20 - Membership Operators & List Manipulation
 # DAY 21 - F-Strings
-# DAY 22 - Dictionary
-
+# DAY 22 - Dictionaries
+# DAY 23 - Constants and Multiple Assignment
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
@@ -94,7 +94,7 @@ x %= 5    # x = 2.0
 
 # --- 6. MODULUS OPERATOR (%) ---
 # % returns the remainder of division.
-remainder = 10 % 3   # 10 / 3 = 3 remainder 1
+remainder = 10 % 3  # 10 / 3 = 3 remainder 1
 
 # Common use:
 # number % 2 == 0 -> even number
@@ -354,11 +354,6 @@ say_hello()
 # A function is like a machine.
 # Input -> process -> output
 
-# Example:
-# def multiply(num1, num2):
-#     return num1 * num2
-# print(multiply(3, 4))  # 12
-
 # ====================================
 # 📅 DAY 11 - 18 September 2026
 # ====================================
@@ -535,17 +530,17 @@ scores.sort()
 print(scores)  # [1, 3, 7, 9]
 
 # cloning a list [:]
-Fruits = ["apple", "banana", "orange"]
-fruits_veg = Fruits[:]
-fruits_veg.append('potatoes')
-pritn(fruits_veg) # ['apple', 'banana', 'orange', 'potatoes'}
+fruits = ["apple", "banana", "orange"]
+fruits_copy = fruits[:]
+fruits_copy.append("potatoes")
+print(fruits_copy)  # ['apple', 'banana', 'orange', 'potatoes']
 
-# Creating alisas(variable names that point to the same list)
+# Creating aliases (variables that point to the same list)
 colors = ['red', 'orange', 'purple']
 hues = colors
 hues.append('blue')
-print(hues) # ['red', 'orange', 'purple', 'blue']
-print(colors) # ['red', 'orange', 'purple', 'blue']
+print(hues)  # ['red', 'orange', 'purple', 'blue']
+print(colors)  # ['red', 'orange', 'purple', 'blue']
 
 # ====================================
 # 📅 DAY 16 - 23 September 2026
@@ -812,14 +807,10 @@ print(f"Pi with 4 decimals: {pi:.4f}")
 # ✅ More readable than old-style string formatting
 
 # ====================================
-# SAFE DEMO RUNNER
-# ====================================
-
-# ====================================
 # 📅 DAY 22 - 09 October 2026
 # ====================================
 
-# --- 23. DICTIONARIES ---
+# --- 42. DICTIONARIES ---
 # A dictionary stores data in key-value pairs.
 # Syntax:
 # {"key": "value"}
@@ -897,36 +888,80 @@ print(student.get("name"))  # Pablo
 # Summary:
 # - Dictionaries store data as key-value pairs
 # - Keys are unique
-# - Values can be strings, numbers, lists, or even other dictionaries
+# - Values can be strings, numbers, lists, or other dictionaries
 # - They are useful for storing related information
 
 # ====================================
-# DAY 23 - 12 October 2026
+# 📅 DAY 23 - 12 October 2026
 # ====================================
 
-# --- 24. Constant ---
-# In Python, constants are variables whose values should not be changed during program execution. Python uses a naming convention to indicate constants:
+# --- 43. CONSTANTS ---
+# In Python, constants are variables whose values should not be changed during program execution.
+# Python uses a naming convention to indicate constants.
 
 # Write constant names in all uppercase letters, using underscores to separate words:
-
 PI = 3.14159
 HOURS_IN_A_DAY = 24
 MAX_USERS = 100
 
-# This is a convention only - Python doesn't enforce immutability, but it signals to other developers that these values should remain unchanged.
+# This is a convention only - Python doesn't enforce immutability,
+# but it signals to other developers that these values should remain unchanged.
 
-# ---25. Variable assingment --
+# --- 44. MULTIPLE ASSIGNMENT ---
 # Assign multiple values at once
 
 a, b, c = 1, 2, 3
+print(a, b, c)
 
 # Assign the same value to multiple variables:
-
 x = y = z = 10
+print(x, y, z)
 
-Unpack values from a list:
+# Unpack values from a list:
+first, second, third = [1, 2, 3]
+print(first, second, third)
 
-a, b, c = [1, 2, 3]
+# ====================================
+# QUICK REVISION
+# ====================================
 
+# Variables and data types
+name = "Pablo"
+age = 21
+is_student = True
 
+# Lists
+names = ["Alice", "Bob", "Charlie"]
+names.append("Diana")
+print(names)
 
+# Tuples
+point = (10, 20)
+
+# Dictionaries
+profile = {"name": "Pablo", "age": 21}
+print(profile["name"])
+
+# Functions
+def square(number):
+    return number * number
+
+print(square(5))  # 25
+
+# Loops
+for i in range(3):
+    print(i)
+
+# F-strings
+print(f"Hello {name}, you are {age} years old.")
+
+# ====================================
+# NOTES FOR NEXT DAYS
+# ====================================
+# - Set up a daily practice routine
+# - Try to write small programs every day
+# - Read code examples out loud
+# - Practice debugging errors
+# - Revisit old topics once a week
+
+# END OF NOTES
