@@ -914,3 +914,19 @@ HOURS_IN_A_DAY = 24
 MAX_USERS = 100
 
 # This is a convention only - Python doesn't enforce immutability, but it signals to other developers that these values should remain unchanged.
+
+# ---25. Variable assingment --
+# Assign multiple values at once
+
+a, b, c = 1, 2, 3
+
+# Assign the same value to multiple variables:
+
+x = y = z = 10
+
+Unpack values from a list:
+
+a, b, c = [1, 2, 3]
+
+
+
