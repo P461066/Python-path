@@ -900,23 +900,17 @@ print(student.get("name"))  # Pablo
 # - Values can be strings, numbers, lists, or even other dictionaries
 # - They are useful for storing related information
 
+# ====================================
+# DAY 23 - 12 October 2026
+# ====================================
 
-def _demo():
-    # List example
-    demo_fruits = ["apple", "banana", "cherry"]
-    print("List example:", demo_fruits)
-    print("First item:", demo_fruits[0])
-    print("List length:", len(demo_fruits))
+# --- 24. Constant ---
+# In Python, constants are variables whose values should not be changed during program execution. Python uses a naming convention to indicate constants:
 
-    # F-string example
-    name = "Pablo"
-    score = 95
-    print(f"\nF-string example: {name} scored {score}%")
+# Write constant names in all uppercase letters, using underscores to separate words:
 
-    # Formatted number
-    price = 1234.56
-    print(f"Formatted price: ${price:,.2f}")
+PI = 3.14159
+HOURS_IN_A_DAY = 24
+MAX_USERS = 100
 
-
-if __name__ == "__main__":
-    _demo()
+# This is a convention only - Python doesn't enforce immutability, but it signals to other developers that these values should remain unchanged.
