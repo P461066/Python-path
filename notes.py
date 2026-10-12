@@ -26,7 +26,7 @@
 # DAY 20 - Membership Operators & List Manipulation
 # DAY 21 - F-Strings
 # DAY 22 - Dictionary
-# CURRENT TOPIC - F-Strings & String Formatting
+
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
