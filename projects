@@ -1,0 +1,19 @@
+# Projects
+
+Use this file to list and track your projects. Fill in or duplicate the template below for each project.
+
+- name: Example Project
+  description: A short summary of the project and goals.
+  repo_or_link: https://github.com/yourname/example (or local path)
+  status: Idea / In progress / Completed
+  tech: Python, Flask, etc.
+  started: 2026-10-12
+  notes:
+    - Note 1
+    - Note 2
+
+---
+
+Tips:
+- Keep each project as a separate bullet or use subheadings if you prefer.
+- Add links to issues or demos where helpful.
