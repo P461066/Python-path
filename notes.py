@@ -955,13 +955,3 @@ for i in range(3):
 # F-strings
 print(f"Hello {name}, you are {age} years old.")
 
-# ====================================
-# NOTES FOR NEXT DAYS
-# ====================================
-# - Set up a daily practice routine
-# - Try to write small programs every day
-# - Read code examples out loud
-# - Practice debugging errors
-# - Revisit old topics once a week
-
-# END OF NOTES
