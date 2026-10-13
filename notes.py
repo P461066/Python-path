@@ -922,10 +922,63 @@ first, second, third = [1, 2, 3]
 print(first, second, third)
 
 # ====================================
-# Continuationn: PLACEHOLDER 
+# 📅 DAY 24 - 13 October 2026
 # ====================================
 
+# --- 45. SETS ---
+# A set stores unique values.
+# It is unordered and does not keep duplicates.
 
+numbers = [1, 2, 2, 3, 4, 4, 5]
+unique_numbers = set(numbers)
+print(unique_numbers)  # {1, 2, 3, 4, 5}
+
+# Common set operations:
+# add() -> adds an item
+# remove() -> removes an item
+# union() -> combines sets
+# intersection() -> common items
+# difference() -> items in one set but not another
+
+set_a = {1, 2, 3, 4}
+set_b = {3, 4, 5, 6}
+print(set_a | set_b)   # union
+print(set_a & set_b)   # intersection
+print(set_a - set_b)   # difference
+
+# --- 46. LIST COMPREHENSIONS ---
+# A list comprehension is a short way to create a list.
+
+squares = [n * n for n in range(1, 6)]
+print(squares)  # [1, 4, 9, 16, 25]
+
+evens = [n for n in range(1, 11) if n % 2 == 0]
+print(evens)  # [2, 4, 6, 8, 10]
+
+# --- 47. DICTIONARY REVIEW ---
+# Dictionary methods help you access values safely and cleanly.
+
+student = {
+    "name": "Pablo",
+    "age": 21,
+    "course": "Python"
+}
+
+print(student.get("name"))  # Pablo
+print(student.keys())
+print(student.values())
+print(student.items())
+
+# --- 48. PRACTICE EXERCISES ---
+# 1. Create a set from a list with duplicate values.
+# 2. Use a list comprehension to make a list of squares from 1 to 10.
+# 3. Create a dictionary of your favorite foods and prices.
+# 4. Use student.get() to safely get a value that may not exist.
+
+# Summary:
+# - Sets are useful when you need unique values.
+# - List comprehensions make code shorter and readable.
+# - Dictionaries are still one of the most useful data structures in Python.
 
 # ====================================
 # QUICK REVISION
