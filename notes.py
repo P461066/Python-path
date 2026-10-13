@@ -1,5 +1,5 @@
 # Python Notes - My Learning Journey
-# Started: 08 September 2026
+# Started: 13 October 2026
 
 # ====================================
 # TABLE OF CONTENTS
@@ -29,7 +29,7 @@
 # DAY 23 - Constants and Multiple Assignment
 
 # ====================================
-# 📅 DAY 1 - 08 September 2026
+# 📅 DAY 1 - 13 October 2026
 # ====================================
 
 # --- 1. VARIABLES ---
@@ -65,7 +65,7 @@ variable_false = False
 # True  ✅ correct
 
 # ====================================
-# 📅 DAY 2 - 09 September 2026
+# 📅 DAY 2 - 13 October 2026
 # ====================================
 
 # --- 4. ARITHMETIC OPERATORS ---
@@ -118,7 +118,7 @@ print(1 >= 2)  # False
 print(1 <= 2)  # True
 
 # ====================================
-# 📅 DAY 3 - 10 September 2026
+# 📅 DAY 3 - 13 October 2026
 # ====================================
 
 # --- 8. LOGICAL OPERATORS ---
@@ -147,7 +147,7 @@ result2 = not (is_student or is_employed)
 print(result2)  # True
 
 # ====================================
-# 📅 DAY 4 - 11 September 2026
+# 📅 DAY 4 - 13 October 2026
 # ====================================
 
 # --- 10. IF STATEMENTS ---
@@ -193,7 +193,7 @@ else:
     print("Too young to drive")
 
 # ====================================
-# 📅 DAY 5 - 12 September 2026
+# 📅 DAY 5 - 13 October 2026
 # ====================================
 
 # --- 12. INPUT() ---
@@ -221,7 +221,7 @@ else:
 # So if you want to add numbers from user input, convert them first.
 
 # ====================================
-# 📅 DAY 6 - 13 September 2026
+# 📅 DAY 6 - 13 October 2026
 # ====================================
 
 # --- 15. WHILE LOOP ---
@@ -245,7 +245,7 @@ for i in range(5):
     print(i)  # 0, 1, 2, 3, 4
 
 # ====================================
-# 📅 DAY 7 - 14 September 2026
+# 📅 DAY 7 - 13 October 2026
 # ====================================
 
 # --- 17. BREAK AND CONTINUE ---
@@ -265,7 +265,7 @@ for i in range(10):
     print(i)  # 0, 1, 2, 3, 4, 5
 
 # ====================================
-# 📅 DAY 8 - 15 September 2026
+# 📅 DAY 8 - 13 October 2026
 # ====================================
 
 # --- 18. RANGE() ---
@@ -286,7 +286,7 @@ for i in range(10, 0, -2):
     print(i)
 
 # ====================================
-# 📅 DAY 9 - 16 September 2026
+# 📅 DAY 9 - 13 October 2026
 # ====================================
 
 # --- 19. NESTED LOOPS ---
@@ -308,7 +308,7 @@ for x in range(2):
 # So the inner loop is repeated many times.
 
 # ====================================
-# 📅 DAY 10 - 17 September 2026
+# 📅 DAY 10 - 13 October 2026
 # ====================================
 
 # --- 20. FUNCTIONS (def) ---
@@ -355,7 +355,7 @@ say_hello()
 # Input -> process -> output
 
 # ====================================
-# 📅 DAY 11 - 18 September 2026
+# 📅 DAY 11 - 13 October 2026
 # ====================================
 
 # --- 21. RETURN STATEMENT ---
@@ -402,7 +402,7 @@ print(y)
 # If no return is used, the function returns None by default.
 
 # ====================================
-# 📅 DAY 12 - 19 September 2026
+# 📅 DAY 12 - 13 October 2026
 # ====================================
 
 # --- 22. DEFAULT PARAMETERS ---
@@ -442,7 +442,7 @@ print(introduce("Pablo", 20))  # Uses the provided age: 20
 # - Required parameters must be written before default parameters.
 
 # ====================================
-# 📅 DAY 13 - 20 September 2026
+# 📅 DAY 13 - 13 October 2026
 # ====================================
 
 # --- 23. LIST BASICS ---
@@ -458,7 +458,7 @@ print(fruits)
 print(len(numbers))  # 4
 
 # ====================================
-# 📅 DAY 14 - 21 September 2026
+# 📅 DAY 14 - 13 October 2026
 # ====================================
 
 # --- 24. ACCESSING LIST ITEMS ---
@@ -498,7 +498,7 @@ for index, fruit in enumerate(fruits):
 print(len(fruits))  # 3
 
 # ====================================
-# 📅 DAY 15 - 22 September 2026
+# 📅 DAY 15 - 13 October 2026
 # ====================================
 
 # --- 28. BASIC LIST METHODS ---
@@ -543,7 +543,7 @@ print(hues)  # ['red', 'orange', 'purple', 'blue']
 print(colors)  # ['red', 'orange', 'purple', 'blue']
 
 # ====================================
-# 📅 DAY 16 - 23 September 2026
+# 📅 DAY 16 - 13 October 2026
 # ====================================
 
 # --- 29. TUPLES ---
@@ -569,7 +569,7 @@ my_list[0] = 10  # This works
 # Use a tuple when you want it to stay fixed.
 
 # ====================================
-# 📅 DAY 17 - 24 September 2026
+# 📅 DAY 17 - 13 October 2026
 # ====================================
 
 # --- 30. ENUMERATE() ---
@@ -607,7 +607,7 @@ for index in range(len(text)):
     print(text[index])
 
 # ====================================
-# 📅 DAY 18 - 25 September 2026
+# 📅 DAY 18 - 13 October 2026
 # ====================================
 
 # --- 33. JOINING A LIST INTO A STRING ---
@@ -642,7 +642,7 @@ print(numbers[5:])  # [5, 6, 7, 8, 9]
 # start is inclusive, stop is exclusive
 
 # ====================================
-# 📅 DAY 19 - 26 September 2026
+# 📅 DAY 19 - 13 October 2026
 # ====================================
 
 # --- 35. LIST MANIPULATION OPERATORS ---
@@ -677,7 +677,7 @@ print(numbers[::-1])   # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 # - Negative step reverses the order.
 
 # ====================================
-# 📅 DAY 20 - 27 September 2026
+# 📅 DAY 20 - 13 October 2026
 # ====================================
 
 # --- 37. MEMBERSHIP OPERATORS ---
@@ -711,7 +711,7 @@ print(numbers)  # [1, 2, 1, 2, 1, 2]
 # - * repeats list elements.
 
 # ====================================
-# 📅 DAY 21 - 03 October 2026
+# 📅 DAY 21 - 13 October 2026
 # ====================================
 
 # --- 39. F-STRINGS ---
@@ -807,7 +807,7 @@ print(f"Pi with 4 decimals: {pi:.4f}")
 # ✅ More readable than old-style string formatting
 
 # ====================================
-# 📅 DAY 22 - 09 October 2026
+# 📅 DAY 22 - 13 October 2026
 # ====================================
 
 # --- 42. DICTIONARIES ---
@@ -892,7 +892,7 @@ print(student.get("name"))  # Pablo
 # - They are useful for storing related information
 
 # ====================================
-# 📅 DAY 23 - 12 October 2026
+# 📅 DAY 23 - 13 October 2026
 # ====================================
 
 # --- 43. CONSTANTS ---
