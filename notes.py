@@ -981,6 +981,25 @@ print(student.items())
 # - Dictionaries are still one of the most useful data structures in Python.
 
 # ====================================
+# DAY 25 - 14 October 2026
+# ====================================
+
+# --- 49. PLACEHOLDERS ---
+# A placeholder variable holds a value temporarily and is commonly represented by an underscore _ in Python.
+
+# Using underscore in loops when the loop variable isn't needed:
+# Example 1
+for _ in range(5):
+    print("Looping")
+
+# Example 2
+# Using multiple underscores to ignore values during unpacking:
+
+data = (1, 2, 3, 4, 5)
+first, _, _, _, last = data
+print(first)  # Output: 1
+print(last)   # Output: 5
+# ====================================
 # QUICK REVISION
 # ====================================
 
