@@ -1,5 +1,6 @@
 # Python Notes - My Learning Journey
 # Started: 08 September 2026
+# Last Updated: 14 October 2026
 
 # ====================================
 # TABLE OF CONTENTS
@@ -23,10 +24,12 @@
 # DAY 17 - enumerate() & String Methods
 # DAY 18 - Joining Lists & List Slicing
 # DAY 19 - List Manipulation Operators & Slicing
-# DAY 20 - Membership Operators & List Manipulation
+# DAY 20 - Membership Operators & List Operations
 # DAY 21 - F-Strings
 # DAY 22 - Dictionaries
 # DAY 23 - Constants and Multiple Assignment
+# DAY 24 - Sets, List Comprehensions & Dictionary Review
+# DAY 25 - Placeholders & round()
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
@@ -692,7 +695,7 @@ print("mango" in fruits)      # False
 print("mango" not in fruits)  # True
 print("banana" not in fruits) # False
 
-# --- 38. LIST MANIPULATION OPERATORS ---
+# --- 38. LIST OPERATIONS REVIEW ---
 # + combines two lists into a new list.
 # * repeats a list a specified number of times.
 
@@ -981,7 +984,7 @@ print(student.items())
 # - Dictionaries are still one of the most useful data structures in Python.
 
 # ====================================
-# DAY 25 - 14 October 2026
+# 📅 DAY 25 - 14 October 2026
 # ====================================
 
 # --- 49. PLACEHOLDERS ---
@@ -1000,10 +1003,11 @@ first, _, _, _, last = data
 print(first)  # Output: 1
 print(last)   # Output: 5
 
-# --- 50. round() FUNCTION
+# --- 50. round() FUNCTION ---
 # The round() function rounds numbers to the nearest value
 
-round(number, ndigits)
+# Syntax:
+# round(number, ndigits)
 # number: The value to round
 # ndigits: Decimal places to keep (optional)
 
@@ -1012,9 +1016,9 @@ print(round(4.567, 2))  # 4.57
 print(round(456.78, -1))  # 460
 
 # Python rounds halfway cases to the nearest even number (banker's rounding):
-
 print(round(2.5))  # 2 (rounds down — 2 is even)
 print(round(3.5))  # 4 (rounds up — 4 is even)
+
 # ====================================
 # QUICK REVISION
 # ====================================
@@ -1048,3 +1052,5 @@ for i in range(3):
 
 # F-strings
 print(f"Hello {name}, you are {age} years old.")
+
+# End of notes
