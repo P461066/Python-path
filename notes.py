@@ -999,6 +999,22 @@ data = (1, 2, 3, 4, 5)
 first, _, _, _, last = data
 print(first)  # Output: 1
 print(last)   # Output: 5
+
+# --- 50. round() FUNCTION
+# The round() function rounds numbers to the nearest value
+
+round(number, ndigits)
+# number: The value to round
+# ndigits: Decimal places to keep (optional)
+
+print(round(4.567))     # 5
+print(round(4.567, 2))  # 4.57
+print(round(456.78, -1))  # 460
+
+# Python rounds halfway cases to the nearest even number (banker's rounding):
+
+print(round(2.5))  # 2 (rounds down — 2 is even)
+print(round(3.5))  # 4 (rounds up — 4 is even)
 # ====================================
 # QUICK REVISION
 # ====================================
