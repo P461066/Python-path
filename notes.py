@@ -1019,7 +1019,7 @@ print(round(456.78, -1))  # 460
 print(round(2.5))  # 2 (rounds down — 2 is even)
 print(round(3.5))  # 4 (rounds up — 4 is even)
 
-# 
+# ---list()---
 # Use the list() function to cast iterables like tuples, strings, or ranges into lists:
 
 # Casting a tuple to a list:
