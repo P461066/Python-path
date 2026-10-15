@@ -1019,6 +1019,28 @@ print(round(456.78, -1))  # 460
 print(round(2.5))  # 2 (rounds down — 2 is even)
 print(round(3.5))  # 4 (rounds up — 4 is even)
 
+# 
+# Use the list() function to cast iterables like tuples, strings, or ranges into lists:
+
+# Casting a tuple to a list:
+
+my_tuple = (1, 2, 3)
+my_list = list(my_tuple)
+print(my_list)  # [1, 2, 3]
+
+# Casting a string splits it into individual characters:
+
+my_string = "hello"
+my_list = list(my_string)
+print(my_list)  # ['h', 'e', 'l', 'l', 'o']
+
+# Casting a range to a list gives all the numbers at once:
+
+my_range = range(5)
+my_list = list(my_range)
+print(my_list)  # [0, 1, 2, 3, 4]
+
+
 # ====================================
 # QUICK REVISION
 # ====================================
