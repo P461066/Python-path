@@ -1,6 +1,6 @@
 # Python Notes - My Learning Journey
 # Started: 08 September 2026
-# Last Updated: 14 October 2026
+# Last Updated: 15 October 2026
 
 # ====================================
 # TABLE OF CONTENTS
@@ -551,7 +551,7 @@ print(colors)  # ['red', 'orange', 'purple', 'blue']
 
 # --- 29. TUPLES ---
 # A tuple is an immutable (read-only) data structure.
-# It is created using parentheses ().
+# It is created using parentheses ()
 # You access elements using indexing, including negative indexing.
 
 coordinates = (67, 678)
@@ -1019,27 +1019,57 @@ print(round(456.78, -1))  # 460
 print(round(2.5))  # 2 (rounds down — 2 is even)
 print(round(3.5))  # 4 (rounds up — 4 is even)
 
-# ---list()---
-# Use the list() function to cast iterables like tuples, strings, or ranges into lists:
+# --- list() ---
+# The list() function converts an iterable (tuple, string, range, set, dict keys, generator, map, zip, etc.)
+# into a new list. Useful to materialize iterators or to make a shallow copy of a sequence.
 
 # Casting a tuple to a list:
-
 my_tuple = (1, 2, 3)
 my_list = list(my_tuple)
 print(my_list)  # [1, 2, 3]
 
 # Casting a string splits it into individual characters:
-
 my_string = "hello"
 my_list = list(my_string)
 print(my_list)  # ['h', 'e', 'l', 'l', 'o']
 
 # Casting a range to a list gives all the numbers at once:
-
 my_range = range(5)
 my_list = list(my_range)
 print(my_list)  # [0, 1, 2, 3, 4]
 
+# Casting a set to a list (note: sets are unordered):
+my_set = {3, 1, 2}
+my_list = list(my_set)
+print(my_list)  # order may vary: [1, 2, 3]
+
+# Casting a dict returns a list of its keys by default:
+my_dict = {'a': 1, 'b': 2}
+keys_list = list(my_dict)
+print(keys_list)  # ['a', 'b']
+
+# Casting map/filter/zip/generator expressions consumes the iterator and returns a list:
+mapped = map(lambda x: x * 2, range(5))
+mapped_list = list(mapped)
+print(mapped_list)  # [0, 2, 4, 6, 8]
+
+z = zip([1, 2], ['a', 'b'])
+print(list(z))  # [(1, 'a'), (2, 'b')]
+
+# Important notes and common pitfalls:
+# - list(some_iterable) creates a new list (shallow copy) — it does not alias the original.
+# - If you call list() on an iterator (e.g., generator, map, filter, zip), the iterator will be exhausted.
+# - Casting a dict yields keys. Use list(dict.values()) or list(dict.items()) to get values or (key, value) pairs.
+# - list(s) on a set or dict does not guarantee order (unless using Python 3.7+ where insertion order for dicts is preserved, but sets remain unordered).
+# - For copying a list, list(old_list) or old_list[:] both create a shallow copy.
+
+# Quick examples summarised:
+old = [1, 2, 3]
+copy1 = list(old)  # [1,2,3]
+copy2 = old[:]     # [1,2,3]
+alias = old        # points to same list
+
+print(copy1, copy2, alias)
 
 # ====================================
 # QUICK REVISION
