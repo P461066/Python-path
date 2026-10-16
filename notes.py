@@ -795,19 +795,7 @@ print(f"Pi with 4 decimals: {pi:.4f}")
 #   - Alignment: <, >, ^
 #   - Fill character: any character before alignment
 #   - Width: minimum field width
-#   - Type: d, f, b, x, % etc.
-
-# ====================================
-# DAY 21 SUMMARY
-# ====================================
-
-# 📝 F-STRINGS ARE POWERFUL:
-# ✅ Insert variables directly into strings
-# ✅ Pad numbers with zeros
-# ✅ Align text left, right, or center
-# ✅ Add custom fill characters
-# ✅ Format decimals and grouping separators
-# ✅ More readable than old-style string formatting
+#   - Type: d, f, b, x, % e
 
 # ====================================
 # 📅 DAY 22 - 09 October 2026
