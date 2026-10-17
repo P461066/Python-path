@@ -873,8 +873,25 @@ print(student_profile["grades"]["math"])  # 90
 print(student.keys())
 print(student.values())
 print(student.items())
-
 print(student.get("name"))  # Pablo
+
+Dictionaries in Python can be modified after creation. You can add new key-value pairs, update existing ones, or delete them.
+
+Adding a new key-value pair:
+
+my_dict = {}
+my_dict["name"] = "Alice"
+my_dict["age"] = 30
+
+Updating an existing value:
+
+my_dict["age"] = 31
+
+Deleting a key-value pair:
+
+del my_dict["age"]
+
+To access values in a dictionary, use the key inside square brackets:
 
 # Summary:
 # - Dictionaries store data as key-value pairs
