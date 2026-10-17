@@ -798,13 +798,13 @@ print(f"Pi with 4 decimals: {pi:.4f}")
 #   - Type: d, f, b, x, % e
 
 # ====================================
-# 📅 DAY 22 - 09 October 2026
+# 📅 DAY 22 - 22 October 2026
 # ====================================
 
-# --- 42. DICTIONARIES ---
-# A dictionary stores data in key-value pairs.
-# Syntax:
-# {"key": "value"}
+# --- 24. DICTIONARIES ---
+# A dictionary stores data as key-value pairs.
+# Dictionaries in Python can be modified after creation.
+# You can add new key-value pairs, update existing ones, or delete them.
 
 # Example:
 student = {
@@ -813,23 +813,21 @@ student = {
     "course": "Python"
 }
 
-print(student)  # {'name': 'Pablo', 'age': 20, 'course': 'Python'}
-
-# Access a value using its key:
-print(student["name"])  # Pablo
-print(student["age"])   # 20
+print(student)
+print(student["name"])
+print(student["age"])
 
 # Add a new key-value pair:
 student["city"] = "Lagos"
-print(student)
 
-# Update a value:
+# Update an existing value:
 student["age"] = 21
-print(student["age"])  # 21
 
-# Remove a key:
+# Delete a key:
 student.pop("course")
-print(student)
+
+# Access values by key:
+# student["name"] -> "Pablo"
 
 # Loop through keys:
 for key in student:
@@ -843,16 +841,7 @@ for value in student.values():
 for key, value in student.items():
     print(key, value)
 
-# A dictionary can store other data types too:
-grades = {
-    "math": 90,
-    "science": 85,
-    "history": 88
-}
-
-print(grades["math"])  # 90
-
-# Nested dictionary:
+# Nested dictionary example:
 student_profile = {
     "name": "Pablo",
     "grades": {
@@ -861,43 +850,16 @@ student_profile = {
     }
 }
 
-print(student_profile["grades"]["math"])  # 90
-
-# Common dictionary methods:
-# keys() -> returns all keys
-# values() -> returns all values
-# items() -> returns key-value pairs
-# get() -> gets a value safely
-# pop() -> removes and returns a value
-
-print(student.keys())
-print(student.values())
-print(student.items())
-print(student.get("name"))  # Pablo
-
-Dictionaries in Python can be modified after creation. You can add new key-value pairs, update existing ones, or delete them.
-
-Adding a new key-value pair:
-
-my_dict = {}
-my_dict["name"] = "Alice"
-my_dict["age"] = 30
-
-Updating an existing value:
-
-my_dict["age"] = 31
-
-Deleting a key-value pair:
-
-del my_dict["age"]
-
-To access values in a dictionary, use the key inside square brackets:
+print(student_profile["grades"]["math"])
 
 # Summary:
-# - Dictionaries store data as key-value pairs
+# - A dictionary uses {}
+# - Each item is a key-value pair
 # - Keys are unique
-# - Values can be strings, numbers, lists, or other dictionaries
-# - They are useful for storing related information
+# - You can add, update, and delete entries
+# - Dictionaries are useful for storing related data
+
+
 
 # ====================================
 # 📅 DAY 23 - 12 October 2026
