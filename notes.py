@@ -859,6 +859,20 @@ print(student_profile["grades"]["math"])
 # - You can add, update, and delete entries
 # - Dictionaries are useful for storing related data
 
+# --- Nested dictionary ---
+# A nested dictionary is a dictionary within a dictionary, useful for organizing complex data structures:
+
+students = {
+    "Alice": {"age": 20, "grade": "A"},
+    "Bob": {"age": 22, "grade": "B"}
+}
+
+# Accessing nested values
+print(students["Alice"]["age"])  # Output: 20
+
+# Adding to nested dictionary
+students["Alice"]["major"] = "Math"
+
 
 
 # ====================================
