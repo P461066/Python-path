@@ -551,7 +551,7 @@ print(colors)  # ['red', 'orange', 'purple', 'blue']
 
 # --- 29. TUPLES ---
 # A tuple is an immutable (read-only) data structure.
-# It is created using parentheses ()
+# It is created using parentheses ().
 # You access elements using indexing, including negative indexing.
 
 coordinates = (67, 678)
@@ -801,7 +801,7 @@ print(f"Pi with 4 decimals: {pi:.4f}")
 # 📅 DAY 22 - 22 October 2026
 # ====================================
 
-# --- 24. DICTIONARIES ---
+# --- 42. DICTIONARIES ---
 # A dictionary stores data as key-value pairs.
 # Dictionaries in Python can be modified after creation.
 # You can add new key-value pairs, update existing ones, or delete them.
@@ -873,8 +873,6 @@ print(students["Alice"]["age"])  # Output: 20
 # Adding to nested dictionary
 students["Alice"]["major"] = "Math"
 
-
-
 # ====================================
 # 📅 DAY 23 - 12 October 2026
 # ====================================
@@ -939,47 +937,40 @@ print(squares)  # [1, 4, 9, 16, 25]
 evens = [n for n in range(1, 11) if n % 2 == 0]
 print(evens)  # [2, 4, 6, 8, 10]
 
-# --- 47. Looping through a dictionary---
-# Looping Through Dictionaries
-# Looping through a dictionary allows you to access each key-value pair and perform operations on them.  
+# --- 47. LOOPING THROUGH A DICTIONARY ---
+# Looping through a dictionary allows you to access each key-value pair and perform operations on them.
 # Python provides several ways to iterate through dictionaries, making it easy to work with their contents.
 
-Looping through keys:
-
+# Looping through keys:
 my_dict = {'name': 'Alice', 'age': 30, 'city': 'New York'}
 
 for key in my_dict:
     print(key)
 
 # Output:
-name
-age
-city
+# name
+# age
+# city
 
 # Looping through values:
 for value in my_dict.values():
     print(value)
 
 # Output:
-Alice
-30
-New York
+# Alice
+# 30
+# New York
 
 # Looping through key-value pairs:
-
 for key, value in my_dict.items():
     print(f'{key}: {value}')
 
-#Output:
-name: Alice
-age: 30
-city: New York
+# Output:
+# name: Alice
+# age: 30
+# city: New York
 
-# In these examples, the first loop iterates over the keys of the dictionary. 
-# The second loop iterates over the values using the values() method. 
-# The third loop uses the items() method to iterate over both keys and values simultaneously.
-
-# --- 47. DICTIONARY REVIEW ---
+# --- 48. DICTIONARY REVIEW ---
 # Dictionary methods help you access values safely and cleanly.
 
 student = {
@@ -993,7 +984,7 @@ print(student.keys())
 print(student.values())
 print(student.items())
 
-# --- 48. PRACTICE EXERCISES ---
+# --- 49. PRACTICE EXERCISES ---
 # 1. Create a set from a list with duplicate values.
 # 2. Use a list comprehension to make a list of squares from 1 to 10.
 # 3. Create a dictionary of your favorite foods and prices.
@@ -1008,7 +999,7 @@ print(student.items())
 # 📅 DAY 25 - 14 October 2026
 # ====================================
 
-# --- 49. PLACEHOLDERS ---
+# --- 50. PLACEHOLDERS ---
 # A placeholder variable holds a value temporarily and is commonly represented by an underscore _ in Python.
 
 # Using underscore in loops when the loop variable isn't needed:
@@ -1024,7 +1015,7 @@ first, _, _, _, last = data
 print(first)  # Output: 1
 print(last)   # Output: 5
 
-# --- 50. round() FUNCTION ---
+# --- 51. round() FUNCTION ---
 # The round() function rounds numbers to the nearest value
 
 # Syntax:
