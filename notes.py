@@ -1084,6 +1084,35 @@ alias = old        # points to same list
 print(copy1, copy2, alias)
 
 # ====================================
+# 📅 DAY 26 - 25 October 2026
+# ====================================
+
+# --- 52. TERNARY OPERATORS ---
+# A ternary operator is a concise, single-line shorthand for a standard if-else statement.
+# It allows you to assign values or evaluate expressions compactly without writing multi-line blocks.
+
+# Syntax:
+# value_if_true if condition else value_if_false
+
+# Example 1: Assigning to a variable
+age = 20
+status = "Eligible" if age >= 18 else "Not Eligible"
+print(status)  # Eligible
+
+# Example 2: Direct use inside a print statement
+score = 75
+print("Pass" if score >= 50 else "Fail")  # Pass
+
+# --- 53. PRACTICE CHALLENGE: SCORE STATUS ---
+# Create a program that takes an integer score from the user 
+# and uses a ternary operator to determine the status:
+# - Score >= 50 -> "Pass"
+# - Score < 50 -> "Fail"
+
+score = int(input("Enter your score: "))
+status = "Pass" if score >= 50 else "Fail"
+print(f"Status: {status}")
+# ====================================
 # QUICK REVISION
 # ====================================
 
