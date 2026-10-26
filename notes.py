@@ -30,6 +30,7 @@
 # DAY 23 - Constants and Multiple Assignment
 # DAY 24 - Sets, List Comprehensions & Dictionary Review
 # DAY 25 - Placeholders & round()
+# DAY 26 - Indentation Error 
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
@@ -1113,9 +1114,9 @@ score = int(input("Enter your score: "))
 status = "Pass" if score >= 50 else "Fail"
 print(f"Status: {status}")
 
-# ================================
-# DAY 27 - 26 October 2026
-# ================================
+# ===================================
+# 📅 DAY 27 - 26 October 2026
+# ===================================
 
 # ---53. Indentation Errors ----
 # In Python, proper indentation is crucial for defining the scope of blocks of code, such as loops, functions, and conditional statements. 
