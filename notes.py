@@ -1138,7 +1138,44 @@ else:
 # In the incorrect example, the print statement inside the if block is not properly indented, which will result in an IndentationError.
 # Consistent and correct indentation is essential for writing valid Python code.
 
+# ====================================
+# 📅 DAY 28 - 27 October 2026
+# ====================================
 
+# --- 54. SETS & POP BEHAVIOR ---
+# A set is an unordered collection of unique elements.
+# Sets automatically remove duplicates and do not support indexing.
+
+# Creating sets:
+numbers = {1, 2, 3, 4, 5}
+fruits = {"apple", "banana", "cherry"}
+empty_set = set()  # Note: {} creates an empty dictionary, not an empty set!
+
+# Automatic duplicate handling:
+unique_set = {1, 2, 2, 3}
+print(unique_set)  # Output: {1, 2, 3} (duplicate 2 is silently discarded)
+
+# --- 55. LIST POP vs SET POP ---
+# .pop() behaves differently depending on the data structure:
+
+# On a List: Predictable. Removes and returns the LAST item.
+sample_list = [10, 20, 30]
+last_item = sample_list.pop()
+print(last_item)     # Output: 30
+print(sample_list)   # Output: [10, 20]
+
+# On a Set: Arbitrary (Unpredictable). 
+# Because sets are unordered, .pop() removes and returns a random/arbitrary item.
+sample_set = {"apple", "banana", "cherry"}
+removed_item = sample_set.pop()
+
+print(removed_item)  # Returns whatever item it pulled (e.g., 'banana')
+print(sample_set)    # Set remaining with that item removed
+
+# Key Takeaways:
+# - Use list.pop() when you want to remove items in order or from the end.
+# - Use set.pop() when you need to grab and remove an arbitrary item from a pool.
+# - Never use set.pop() if you need to target a specific element!
 # ====================================
 # QUICK REVISION
 # ====================================
