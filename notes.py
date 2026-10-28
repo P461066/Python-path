@@ -1236,10 +1236,26 @@ my_set = {1, 2, 3}
 my_set.remove(2)  # Removes 2
 # my_set.remove(5) # ❌ KeyError!
 
-# pop(): Removes and returns an arbitrary element.
-# Raises KeyError if the set is empty.
-my_set = {1, 2, 3}
-element = my_set.pop()  # Removes and returns an arbitrary item
+# .pop() behaves differently depending on the data structure:
+
+# On a List: Predictable. Removes and returns the LAST item.
+sample_list = [10, 20, 30]
+last_item = sample_list.pop()
+print(last_item)     # Output: 30
+print(sample_list)   # Output: [10, 20]
+
+# On a Set: Arbitrary (Unpredictable). 
+# Because sets are unordered, .pop() removes and returns a random/arbitrary item.
+sample_set = {"apple", "banana", "cherry"}
+removed_item = sample_set.pop()
+
+print(removed_item)  # Returns whatever item it pulled (e.g., 'banana')
+print(sample_set)    # Set remaining with that item removed
+
+# Key Takeaways:
+# - Use list.pop() when you want to remove items in order or from the end.
+# - Use set.pop() when you need to grab and remove an arbitrary item from a pool.
+# - Never use set.pop() if you need to target a specific element!
 
 # clear(): Removes all elements from the set, making it empty.
 my_set = {1, 2, 3}
