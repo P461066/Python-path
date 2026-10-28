@@ -1176,6 +1176,82 @@ print(sample_set)    # Set remaining with that item removed
 # - Use list.pop() when you want to remove items in order or from the end.
 # - Use set.pop() when you need to grab and remove an arbitrary item from a pool.
 # - Never use set.pop() if you need to target a specific element!
+
+# ====================================
+# 📅 DAY 29 - 28 October 2026
+# ====================================
+
+# --- 56. SET MATHEMATICAL OPERATIONS ---
+# Sets support mathematical operations for comparing and combining sets[cite: 2].
+
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+# Union (| or union()): Combines elements from both sets, excluding duplicates[cite: 2].
+union_set = set1 | set2  # {1, 2, 3, 4, 5}[cite: 2]
+
+# Intersection (& or intersection()): Returns elements common to both sets[cite: 2].
+intersection_set = set1 & set2  # {3}[cite: 2]
+
+# Difference (- or difference()): Returns elements in the first set but not in the second[cite: 2].
+difference_set = set1 - set2  # {1, 2}[cite: 2]
+
+# Symmetric Difference (^ or symmetric_difference()): 
+# Returns elements in either set, but not in both.
+symmetric_difference_set = set1 ^ set2  # {1, 2, 4, 5}
+
+
+# --- 57. MATHEMATICAL OPERATIONS WITH MULTIPLE SETS ---
+# You can extend operations across more than two sets.
+
+set1 = {1, 2, 3}
+set2 = {2, 3, 4}
+set3 = {3, 4, 5}
+
+# Intersection across multiple sets:
+intersection_result = set1 & set2 & set3  # {3}
+# Or using method syntax:
+# intersection_result = set1.intersection(set2, set3)
+
+# Difference across multiple sets:
+set_a = {1, 2, 3, 4, 5}
+set_b = {4, 5, 6}
+set_c = {5, 6, 7}
+
+difference_result = set_a - set_b - set_c  # {1, 2, 3}
+# Or using method syntax:
+# difference_result = set_a.difference(set_b, set_c)
+
+
+# --- 58. ESSENTIAL SET REMOVAL METHODS ---
+
+# discard(element): Removes the specified element if it exists.
+# Does NOT raise an error if the element is not found.
+my_set = {1, 2, 3}
+my_set.discard(3)  # Removes 3
+my_set.discard(4)  # No error, even though 4 is missing
+
+# remove(element): Removes an element, but raises a KeyError if it doesn't exist.
+my_set = {1, 2, 3}
+my_set.remove(2)  # Removes 2
+# my_set.remove(5) # ❌ KeyError!
+
+# pop(): Removes and returns an arbitrary element.
+# Raises KeyError if the set is empty.
+my_set = {1, 2, 3}
+element = my_set.pop()  # Removes and returns an arbitrary item
+
+# clear(): Removes all elements from the set, making it empty.
+my_set = {1, 2, 3}
+my_set.clear()  # Output: set()
+
+
+# --- 59. CHECKING ELEMENT PRESENCE ---
+# Use 'in' to check membership in O(1) time.
+
+my_set = {1, 2, 3}
+print(2 in my_set)  # True
+print(4 in my_set)  # False
 # ====================================
 # QUICK REVISION
 # ====================================
