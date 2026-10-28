@@ -30,7 +30,10 @@
 # DAY 23 - Constants and Multiple Assignment
 # DAY 24 - Sets, List Comprehensions & Dictionary Review
 # DAY 25 - Placeholders & round()
-# DAY 26 - Indentation Error 
+# DAY 26 - Ternary Operators
+# DAY 27 - Indentation Errors
+# DAY 28 - Sets & Pop Behavior
+# DAY 29 - Set Mathematical Operations & Removal Methods
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
@@ -1118,9 +1121,9 @@ print(f"Status: {status}")
 # 📅 DAY 27 - 26 October 2026
 # ===================================
 
-# ---53. Indentation Errors ----
-# In Python, proper indentation is crucial for defining the scope of blocks of code, such as loops, functions, and conditional statements. 
-# Incorrect indentation can lead to errors or unexpected behavior. 
+# --- 54. Indentation Errors ---
+# In Python, proper indentation is crucial for defining the scope of blocks of code, such as loops, functions, and conditional statements.
+# Incorrect indentation can lead to errors or unexpected behavior.
 # These errors are known as IndentationError.
 
 # Correct Indentation:
@@ -1142,7 +1145,7 @@ else:
 # 📅 DAY 28 - 27 October 2026
 # ====================================
 
-# --- 54. SETS & POP BEHAVIOR ---
+# --- 55. SETS & POP BEHAVIOR ---
 # A set is an unordered collection of unique elements.
 # Sets automatically remove duplicates and do not support indexing.
 
@@ -1155,7 +1158,7 @@ empty_set = set()  # Note: {} creates an empty dictionary, not an empty set!
 unique_set = {1, 2, 2, 3}
 print(unique_set)  # Output: {1, 2, 3} (duplicate 2 is silently discarded)
 
-# --- 55. LIST POP vs SET POP ---
+# --- 56. LIST POP vs SET POP ---
 # .pop() behaves differently depending on the data structure:
 
 # On a List: Predictable. Removes and returns the LAST item.
@@ -1164,7 +1167,7 @@ last_item = sample_list.pop()
 print(last_item)     # Output: 30
 print(sample_list)   # Output: [10, 20]
 
-# On a Set: Arbitrary (Unpredictable). 
+# On a Set: Arbitrary (Unpredictable).
 # Because sets are unordered, .pop() removes and returns a random/arbitrary item.
 sample_set = {"apple", "banana", "cherry"}
 removed_item = sample_set.pop()
@@ -1181,27 +1184,26 @@ print(sample_set)    # Set remaining with that item removed
 # 📅 DAY 29 - 28 October 2026
 # ====================================
 
-# --- 56. SET MATHEMATICAL OPERATIONS ---
-# Sets support mathematical operations for comparing and combining sets[cite: 2].
+# --- 57. SET MATHEMATICAL OPERATIONS ---
+# Sets support mathematical operations for comparing and combining sets.
 
 set1 = {1, 2, 3}
 set2 = {3, 4, 5}
 
-# Union (| or union()): Combines elements from both sets, excluding duplicates[cite: 2].
-union_set = set1 | set2  # {1, 2, 3, 4, 5}[cite: 2]
+# Union (| or union()): Combines elements from both sets, excluding duplicates.
+union_set = set1 | set2  # {1, 2, 3, 4, 5}
 
-# Intersection (& or intersection()): Returns elements common to both sets[cite: 2].
-intersection_set = set1 & set2  # {3}[cite: 2]
+# Intersection (& or intersection()): Returns elements common to both sets.
+intersection_set = set1 & set2  # {3}
 
-# Difference (- or difference()): Returns elements in the first set but not in the second[cite: 2].
-difference_set = set1 - set2  # {1, 2}[cite: 2]
+# Difference (- or difference()): Returns elements in the first set but not in the second.
+difference_set = set1 - set2  # {1, 2}
 
-# Symmetric Difference (^ or symmetric_difference()): 
+# Symmetric Difference (^ or symmetric_difference()):
 # Returns elements in either set, but not in both.
 symmetric_difference_set = set1 ^ set2  # {1, 2, 4, 5}
 
-
-# --- 57. MATHEMATICAL OPERATIONS WITH MULTIPLE SETS ---
+# --- 58. MATHEMATICAL OPERATIONS WITH MULTIPLE SETS ---
 # You can extend operations across more than two sets.
 
 set1 = {1, 2, 3}
@@ -1222,8 +1224,7 @@ difference_result = set_a - set_b - set_c  # {1, 2, 3}
 # Or using method syntax:
 # difference_result = set_a.difference(set_b, set_c)
 
-
-# --- 58. ESSENTIAL SET REMOVAL METHODS ---
+# --- 59. ESSENTIAL SET REMOVAL METHODS ---
 
 # discard(element): Removes the specified element if it exists.
 # Does NOT raise an error if the element is not found.
@@ -1236,38 +1237,17 @@ my_set = {1, 2, 3}
 my_set.remove(2)  # Removes 2
 # my_set.remove(5) # ❌ KeyError!
 
-# .pop() behaves differently depending on the data structure:
-
-# On a List: Predictable. Removes and returns the LAST item.
-sample_list = [10, 20, 30]
-last_item = sample_list.pop()
-print(last_item)     # Output: 30
-print(sample_list)   # Output: [10, 20]
-
-# On a Set: Arbitrary (Unpredictable). 
-# Because sets are unordered, .pop() removes and returns a random/arbitrary item.
-sample_set = {"apple", "banana", "cherry"}
-removed_item = sample_set.pop()
-
-print(removed_item)  # Returns whatever item it pulled (e.g., 'banana')
-print(sample_set)    # Set remaining with that item removed
-
-# Key Takeaways:
-# - Use list.pop() when you want to remove items in order or from the end.
-# - Use set.pop() when you need to grab and remove an arbitrary item from a pool.
-# - Never use set.pop() if you need to target a specific element!
-
 # clear(): Removes all elements from the set, making it empty.
 my_set = {1, 2, 3}
 my_set.clear()  # Output: set()
 
-
-# --- 59. CHECKING ELEMENT PRESENCE ---
+# --- 60. CHECKING ELEMENT PRESENCE ---
 # Use 'in' to check membership in O(1) time.
 
 my_set = {1, 2, 3}
 print(2 in my_set)  # True
 print(4 in my_set)  # False
+
 # ====================================
 # QUICK REVISION
 # ====================================
