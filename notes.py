@@ -1249,6 +1249,38 @@ print(2 in my_set)  # True
 print(4 in my_set)  # False
 
 # ====================================
+# 📅 DAY 30 - 29 October 2026
+# ====================================
+
+# --- 61. SUBSETS AND SUPERSETS ---
+# A subset is a set where all its elements are contained within another set.
+# A superset is a set that contains all the elements of another set.
+
+# 1️Subsets (<= or issubset())
+set1 = {1, 2}
+set2 = {1, 2, 3}
+is_subset = set1 <= set2  # True
+# Method alternative: set1.issubset(set2)
+
+# 2️ Proper Subsets (<)
+# A proper subset means set1 is contained within set2, but set2 has at least one extra element.
+set1 = {1, 2}
+set2 = {1, 2}
+is_proper_subset = set1 < set2  # False
+
+# 3️Supersets (>= or issuperset())
+set1 = {1, 2, 3}
+set2 = {1, 2}
+is_superset = set1 >= set2  # True
+# Method alternative: set1.issuperset(set2)
+
+# 4️Proper Supersets (>)
+set1 = {1, 2, 3}
+set2 = {1, 2}
+is_proper_superset = set1 > set2  # True
+
+
+# ====================================
 # QUICK REVISION
 # ====================================
 
