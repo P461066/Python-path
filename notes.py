@@ -1279,7 +1279,29 @@ set1 = {1, 2, 3}
 set2 = {1, 2}
 is_proper_superset = set1 > set2  # True
 
+# ====================================
+# 📅 DAY 31 - 01 November 2026
+# ====================================
 
+# --- 62. GUARD CLAUSES ---
+# A guard clause is an `if` statement at the very start of a function 
+# that checks for errors or missing data and exits early using `return`.
+# It prevents deep nesting (the "Pyramid of Doom") and keeps code clean.
+
+# 1. The Core Pattern
+def check_item(item_exists):
+    # Guard clause: handle the error / missing condition first
+    if not item_exists:
+        print("Item not found.")
+        return
+    
+    # Main logic stays flat and unindented
+    print("Item processed successfully!")
+
+# 2. Why Use Guard Clauses?
+# - Stops invalid data immediately 
+# - Keeps successful code aligned at the outer indentation level 
+# - Avoids messy, deeply nested `if/else` blocks 
 # ====================================
 # QUICK REVISION
 # ====================================
