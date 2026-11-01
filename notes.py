@@ -29,11 +29,14 @@
 # DAY 22 - Dictionaries
 # DAY 23 - Constants and Multiple Assignment
 # DAY 24 - Sets, List Comprehensions & Dictionary Review
-# DAY 25 - Placeholders & round()
+# DAY 25 - Placeholders, round() & list()
 # DAY 26 - Ternary Operators
 # DAY 27 - Indentation Errors
 # DAY 28 - Sets & Pop Behavior
 # DAY 29 - Set Mathematical Operations & Removal Methods
+# DAY 30 - Subsets & Supersets
+# DAY 31 - Guard Clauses
+# QUICK REVISION
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
@@ -84,6 +87,7 @@ variable_false = False
 # ** exponent
 
 # Example:
+
 a = 2
 b = 3
 c = a + b
