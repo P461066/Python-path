@@ -5,35 +5,35 @@
 # ====================================
 # TABLE OF CONTENTS
 # ====================================
-# DAY 1 - Variables, Strings, Booleans
-# DAY 2 - Arithmetic & Comparison Operators
+# DAY 1 - Variables, Strings & Booleans
+# DAY 2 - Arithmetic, Augmented Assignment, Modulus & Comparison Operators
 # DAY 3 - Logical Operators & De Morgan's Laws
-# DAY 4 - If / Elif / Else
-# DAY 5 - Input & Type Conversion
-# DAY 6 - Loops (While / For)
+# DAY 4 - If / Elif / Else & Nested If Statements
+# DAY 5 - Input, Type Conversion & String vs. Numeric Addition
+# DAY 6 - While Loops & For Loops
 # DAY 7 - Break & Continue
 # DAY 8 - range()
 # DAY 9 - Nested Loops
-# DAY 10 - Functions (def)
-# DAY 11 - Return Statement
+# DAY 10 - Functions
+# DAY 11 - Return Statement & print() vs. return
 # DAY 12 - Default Parameters
-# DAY 13 - Lists: Basics
-# DAY 14 - Lists: Accessing, Modifying & Looping
-# DAY 15 - Lists: Methods
+# DAY 13 - List Basics
+# DAY 14 - Accessing, Modifying, Looping Through & Measuring Lists
+# DAY 15 - List Methods, Copies & Aliases
 # DAY 16 - Tuples
-# DAY 17 - enumerate() & String Methods
-# DAY 18 - Joining Lists & List Slicing
-# DAY 19 - List Manipulation Operators & Slicing
-# DAY 20 - Membership Operators & List Operations
-# DAY 21 - F-Strings
-# DAY 22 - Dictionaries
-# DAY 23 - Constants and Multiple Assignment
-# DAY 24 - Sets, List Comprehensions & Dictionary Review
-# DAY 25 - Placeholders, round() & list()
-# DAY 26 - Ternary Operators
+# DAY 17 - enumerate(), String Methods & Iterating Through Strings
+# DAY 18 - join() & List Slicing
+# DAY 19 - List Operators & Slicing with Steps
+# DAY 20 - Membership Operators & List Operations Review
+# DAY 21 - F-Strings & Formatting
+# DAY 22 - Dictionaries & Nested Dictionaries
+# DAY 23 - Constants & Multiple Assignment
+# DAY 24 - Sets, List Comprehensions, Dictionary Iteration, Review & Exercises
+# DAY 25 - Placeholder Underscores, round() & list()
+# DAY 26 - Ternary Operators & Practice Challenge
 # DAY 27 - Indentation Errors
-# DAY 28 - Sets & Pop Behavior
-# DAY 29 - Set Mathematical Operations & Removal Methods
+# DAY 28 - Sets & List/Set pop() Behavior
+# DAY 29 - Set Operations, Multiple-Set Operations, Removal & Membership
 # DAY 30 - Subsets & Supersets
 # DAY 31 - Guard Clauses
 # QUICK REVISION
@@ -87,7 +87,6 @@ variable_false = False
 # ** exponent
 
 # Example:
-
 a = 2
 b = 3
 c = a + b
@@ -1306,100 +1305,6 @@ def check_item(item_exists):
 # - Stops invalid data immediately 
 # - Keeps successful code aligned at the outer indentation level 
 # - Avoids messy, deeply nested `if/else` blocks 
-
-# ====================================
-# 📅 DAY 32 - 05 November 2026
-# ====================================
-
-# --- 63. sorted() FUNCTION ---
-# The sorted() function sorts data and returns a new list with sorted elements.
-# It does not modify the original collection.
-
-# Basic sorting (ascending order):
-numbers = [3, 1, 4, 1, 5, 9, 2, 6]
-sorted_numbers = sorted(numbers)
-print(sorted_numbers)  # [1, 1, 2, 3, 4, 5, Here are the python notes formatted to match your `DAY` structure:
-
-```python
-# ====================================
-# 📅 DAY 32 - Built-in Functions & Set Iteration
-# ====================================
-
-# --- 63. THE sorted() FUNCTION ---
-# The sorted() function sorts data and returns a new list with sorted elements.
-
-# Basic sorting (ascending order):
-numbers = [3, 1, 4, 1, 5, 9, 2, 6]
-sorted_numbers = sorted(numbers)
-# Output: [1, 1, 2, 3, 4, 5, 6, 9]
-
-# Reverse sorting (descending order):
-sorted_numbers_desc = sorted(numbers, reverse=True)
-# Output: [9, 6, 5, 4, 3, 2, 1, 1]
-
-# Sorting strings alphabetically:
-words = ["apple", "banana", "cherry"]
-sorted_words = sorted(words)
-# Output: ['apple', 'banana', 'cherry']
-
-# Custom sorting with key function:
-sorted_words_by_length = sorted(words, key=len)
-# Sorts by string length
-
-
-# --- 64. min() AND max() FUNCTIONS ---
-# Use min() and max() to find minimum and maximum values in collections.
-
-# Finding minimum and maximum numbers:
-numbers = [3, 1, 4, 1, 5, 9, 2, 6]
-smallest = min(numbers)
-largest = max(numbers)
-print(smallest)  # Output: 1
-print(largest)   # Output: 9
-
-# Finding minimum and maximum strings (lexicographical order):
-words = ["apple", "banana", "cherry"]
-smallest_word = min(words)
-largest_word = max(words)
-print(smallest_word)  # Output: apple
-print(largest_word)   # Output: cherry
-
-
-# --- 65. THE sum() FUNCTION ---
-# The sum() function calculates the sum of elements in an iterable like a list or tuple.
-
-# Basic usage:
-numbers = [1, 2, 3, 4, 5]
-total = sum(numbers)
-print(total)
-# Output: 15
-
-# Using a starting value:
-numbers = [1, 2, 3, 4, 5]
-total = sum(numbers, 10)
-print(total)
-# Output: 25
-
-# ====================================
-# 📅 DAY 33 - 06 November 2026
-# ====================================
-
-# --- 66. LIST COMPREHENSIONS WITH CONDITIONAL LOGIC ---
-# List comprehensions with conditional logic allow you to filter 
-# and transform elements based on specified conditions.
-
-# Syntax:
-# new_list = [expression for item in iterable if condition]
-
-# Components:
-# - expression: The value to be included in the new list
-# - for item in iterable: Loop over each element
-# - if condition: Filter that determines if the item should be included
-
-# Example - filtering even numbers:
-numbers = [1, 2, 3, 4, 5, 6]
-evens = [n for n in numbers if n % 2 == 0]
-print(evens)  # Output: [2, 4, 6]
 # ====================================
 # QUICK REVISION
 # ====================================
