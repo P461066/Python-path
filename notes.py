@@ -1380,7 +1380,26 @@ total = sum(numbers, 10)
 print(total)
 # Output: 25
 
+# ====================================
+# 📅 DAY 33 - 06 November 2026
+# ====================================
 
+# --- 66. LIST COMPREHENSIONS WITH CONDITIONAL LOGIC ---
+# List comprehensions with conditional logic allow you to filter 
+# and transform elements based on specified conditions.
+
+# Syntax:
+# new_list = [expression for item in iterable if condition]
+
+# Components:
+# - expression: The value to be included in the new list
+# - for item in iterable: Loop over each element
+# - if condition: Filter that determines if the item should be included
+
+# Example - filtering even numbers:
+numbers = [1, 2, 3, 4, 5, 6]
+evens = [n for n in numbers if n % 2 == 0]
+print(evens)  # Output: [2, 4, 6]
 # ====================================
 # QUICK REVISION
 # ====================================
