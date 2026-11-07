@@ -1305,6 +1305,47 @@ def check_item(item_exists):
 # - Stops invalid data immediately 
 # - Keeps successful code aligned at the outer indentation level 
 # - Avoids messy, deeply nested `if/else` blocks 
+
+# ====================================
+# 📅 DAY 34 - 07 November 2026
+# ====================================
+
+# --- 68. RETURNING MULTIPLE VALUES WITH TUPLES ---
+# Functions can return multiple values by packaging them into a tuple (separated by commas).
+
+# Example:
+def get_name_and_age():
+    name = "Alice"
+    age = 30
+    return name, age  # Automatically packed into a tuple
+
+# Unpacking the returned tuple into separate variables:
+person_name, person_age = get_name_and_age()
+print(person_name)  # Output: Alice
+print(person_age)   # Output: 30
+
+# Key Points:
+# - When returning multiple items separated by commas, Python packs them into a tuple.
+# - When calling the function, you can unpack the returned tuple directly using multiple assignment.
+
+
+# --- 69. LAMBDA FUNCTIONS ---
+# A lambda function is a small, anonymous function defined using the `lambda` keyword.
+# It can take any number of arguments, but can only contain a single expression.
+# Useful for creating simple, one-line functions without needing the `def` keyword.
+
+# Syntax:
+# lambda arguments: expression
+
+# Example:
+add = lambda x, y: x + y
+result = add(5, 3)
+print(result)  # Output: 8
+
+# Key Points:
+# - Anonymous: It does not have a formal name unless assigned to a variable.
+# - Single Expression: Evaluates and returns the result automatically without a `return` keyword.
+# - Often used in short, throwaway situations or with higher-order functions like map(), filter(), and reduce().
 # ====================================
 # QUICK REVISION
 # ====================================
