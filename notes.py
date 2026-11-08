@@ -858,7 +858,41 @@ student_profile = {
 }
 
 print(student_profile["grades"]["math"])
+# ====================================
+# 📅 DAY 22 - 22 October 2026
+# ====================================
 
+# --- 42. DICTIONARIES ---
+# (Your existing dictionary notes stay here...)
+
+# --- SAFE DICTIONARY LOOKUPS WITH .get() ---
+# The .get() method looks up a key in a dictionary safely.
+# If the key does not exist, it returns None (or a custom default value) 
+# instead of crashing your program with a KeyError.
+
+# Syntax:
+# dictionary.get(key, default_value)
+
+# Example:
+student = {"name": "Pablo", "age": 20}
+
+print(student.get("name"))          # Output: Pablo
+print(student.get("grade"))         # Output: None (no crash!)
+print(student.get("grade", "N/A"))    # Output: N/A (returns default if missing)
+
+
+# --- COUNTING FREQUENCIES WITH .get() ---
+# You can use a dictionary and .get() to count item frequencies 
+# manually without needing any modules or imports.
+
+word = "banana"
+letter_counts = {}
+
+for letter in word:
+    letter_counts[letter] = letter_counts.get(letter, 0) + 1
+
+print(letter_counts)  
+# Output: {'b': 1, 'a': 3, 'n': 2}
 # Summary:
 # - A dictionary uses {}
 # - Each item is a key-value pair
