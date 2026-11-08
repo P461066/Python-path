@@ -28,12 +28,12 @@
 # DAY 21 - F-Strings & Formatting
 # DAY 22 - Dictionaries & Nested Dictionaries
 # DAY 23 - Constants & Multiple Assignment
-# DAY 24 - Sets, List Comprehensions, Dictionary Iteration, Review & Exercises
-# DAY 25 - Placeholder Underscores, round() & list()
+# DAY 24 - Sets, List Comprehensions, Dictionary Review & Practice
+# DAY 25 - Placeholders, round() & list()
 # DAY 26 - Ternary Operators & Practice Challenge
 # DAY 27 - Indentation Errors
-# DAY 28 - Sets & List/Set pop() Behavior
-# DAY 29 - Set Operations, Multiple-Set Operations, Removal & Membership
+# DAY 28 - Sets & pop() Behavior
+# DAY 29 - Set Mathematical Operations, Removal Methods & Membership
 # DAY 30 - Subsets & Supersets
 # DAY 31 - Guard Clauses
 # QUICK REVISION
@@ -808,7 +808,7 @@ print(f"Pi with 4 decimals: {pi:.4f}")
 # 📅 DAY 22 - 22 October 2026
 # ====================================
 
-# --- 42. DICTIONARIES ---
+# --- 42. DICTIONARIES & NESTED DICTIONARIES ---
 # A dictionary stores data as key-value pairs.
 # Dictionaries in Python can be modified after creation.
 # You can add new key-value pairs, update existing ones, or delete them.
@@ -858,41 +858,7 @@ student_profile = {
 }
 
 print(student_profile["grades"]["math"])
-# ====================================
-# 📅 DAY 22 - 22 October 2026
-# ====================================
 
-# --- 42. DICTIONARIES ---
-# (Your existing dictionary notes stay here...)
-
-# --- SAFE DICTIONARY LOOKUPS WITH .get() ---
-# The .get() method looks up a key in a dictionary safely.
-# If the key does not exist, it returns None (or a custom default value) 
-# instead of crashing your program with a KeyError.
-
-# Syntax:
-# dictionary.get(key, default_value)
-
-# Example:
-student = {"name": "Pablo", "age": 20}
-
-print(student.get("name"))          # Output: Pablo
-print(student.get("grade"))         # Output: None (no crash!)
-print(student.get("grade", "N/A"))    # Output: N/A (returns default if missing)
-
-
-# --- COUNTING FREQUENCIES WITH .get() ---
-# You can use a dictionary and .get() to count item frequencies 
-# manually without needing any modules or imports.
-
-word = "banana"
-letter_counts = {}
-
-for letter in word:
-    letter_counts[letter] = letter_counts.get(letter, 0) + 1
-
-print(letter_counts)  
-# Output: {'b': 1, 'a': 3, 'n': 2}
 # Summary:
 # - A dictionary uses {}
 # - Each item is a key-value pair
@@ -900,8 +866,8 @@ print(letter_counts)
 # - You can add, update, and delete entries
 # - Dictionaries are useful for storing related data
 
-# --- Nested dictionary ---
-# A nested dictionary is a dictionary within a dictionary, useful for organizing complex data structures:
+# --- 43. NESTED DICTIONARY ACCESS ---
+# A nested dictionary is a dictionary within a dictionary, useful for organizing complex data structures.
 
 students = {
     "Alice": {"age": 20, "grade": "A"},
@@ -918,7 +884,7 @@ students["Alice"]["major"] = "Math"
 # 📅 DAY 23 - 12 October 2026
 # ====================================
 
-# --- 43. CONSTANTS ---
+# --- 44. CONSTANTS ---
 # In Python, constants are variables whose values should not be changed during program execution.
 # Python uses a naming convention to indicate constants.
 
@@ -930,7 +896,7 @@ MAX_USERS = 100
 # This is a convention only - Python doesn't enforce immutability,
 # but it signals to other developers that these values should remain unchanged.
 
-# --- 44. MULTIPLE ASSIGNMENT ---
+# --- 45. MULTIPLE ASSIGNMENT ---
 # Assign multiple values at once
 
 a, b, c = 1, 2, 3
@@ -948,7 +914,7 @@ print(first, second, third)
 # 📅 DAY 24 - 13 October 2026
 # ====================================
 
-# --- 45. SETS ---
+# --- 46. SETS ---
 # A set stores unique values.
 # It is unordered and does not keep duplicates.
 
@@ -969,7 +935,7 @@ print(set_a | set_b)   # union
 print(set_a & set_b)   # intersection
 print(set_a - set_b)   # difference
 
-# --- 46. LIST COMPREHENSIONS ---
+# --- 47. LIST COMPREHENSIONS ---
 # A list comprehension is a short way to create a list.
 
 squares = [n * n for n in range(1, 6)]
@@ -978,7 +944,7 @@ print(squares)  # [1, 4, 9, 16, 25]
 evens = [n for n in range(1, 11) if n % 2 == 0]
 print(evens)  # [2, 4, 6, 8, 10]
 
-# --- 47. LOOPING THROUGH A DICTIONARY ---
+# --- 48. LOOPING THROUGH A DICTIONARY ---
 # Looping through a dictionary allows you to access each key-value pair and perform operations on them.
 # Python provides several ways to iterate through dictionaries, making it easy to work with their contents.
 
@@ -1011,7 +977,7 @@ for key, value in my_dict.items():
 # age: 30
 # city: New York
 
-# --- 48. DICTIONARY REVIEW ---
+# --- 49. DICTIONARY REVIEW ---
 # Dictionary methods help you access values safely and cleanly.
 
 student = {
@@ -1025,7 +991,7 @@ print(student.keys())
 print(student.values())
 print(student.items())
 
-# --- 49. PRACTICE EXERCISES ---
+# --- 50. PRACTICE EXERCISES ---
 # 1. Create a set from a list with duplicate values.
 # 2. Use a list comprehension to make a list of squares from 1 to 10.
 # 3. Create a dictionary of your favorite foods and prices.
@@ -1040,7 +1006,7 @@ print(student.items())
 # 📅 DAY 25 - 14 October 2026
 # ====================================
 
-# --- 50. PLACEHOLDERS ---
+# --- 51. PLACEHOLDERS ---
 # A placeholder variable holds a value temporarily and is commonly represented by an underscore _ in Python.
 
 # Using underscore in loops when the loop variable isn't needed:
@@ -1056,7 +1022,7 @@ first, _, _, _, last = data
 print(first)  # Output: 1
 print(last)   # Output: 5
 
-# --- 51. round() FUNCTION ---
+# --- 52. round() FUNCTION ---
 # The round() function rounds numbers to the nearest value
 
 # Syntax:
@@ -1072,7 +1038,7 @@ print(round(456.78, -1))  # 460
 print(round(2.5))  # 2 (rounds down — 2 is even)
 print(round(3.5))  # 4 (rounds up — 4 is even)
 
-# --- list() ---
+# --- 53. list() ---
 # The list() function converts an iterable (tuple, string, range, set, dict keys, generator, map, zip, etc.)
 # into a new list. Useful to materialize iterators or to make a shallow copy of a sequence.
 
@@ -1128,7 +1094,7 @@ print(copy1, copy2, alias)
 # 📅 DAY 26 - 25 October 2026
 # ====================================
 
-# --- 52. TERNARY OPERATORS ---
+# --- 54. TERNARY OPERATORS ---
 # A ternary operator is a concise, single-line shorthand for a standard if-else statement.
 # It allows you to assign values or evaluate expressions compactly without writing multi-line blocks.
 
@@ -1144,7 +1110,7 @@ print(status)  # Eligible
 score = 75
 print("Pass" if score >= 50 else "Fail")  # Pass
 
-# --- 53. PRACTICE CHALLENGE: SCORE STATUS ---
+# --- 55. PRACTICE CHALLENGE: SCORE STATUS ---
 # Create a program that takes an integer score from the user 
 # and uses a ternary operator to determine the status:
 # - Score >= 50 -> "Pass"
@@ -1158,7 +1124,7 @@ print(f"Status: {status}")
 # 📅 DAY 27 - 26 October 2026
 # ===================================
 
-# --- 54. Indentation Errors ---
+# --- 56. Indentation Errors ---
 # In Python, proper indentation is crucial for defining the scope of blocks of code, such as loops, functions, and conditional statements.
 # Incorrect indentation can lead to errors or unexpected behavior.
 # These errors are known as IndentationError.
@@ -1182,7 +1148,7 @@ else:
 # 📅 DAY 28 - 27 October 2026
 # ====================================
 
-# --- 55. SETS & POP BEHAVIOR ---
+# --- 57. SETS & POP BEHAVIOR ---
 # A set is an unordered collection of unique elements.
 # Sets automatically remove duplicates and do not support indexing.
 
@@ -1195,7 +1161,7 @@ empty_set = set()  # Note: {} creates an empty dictionary, not an empty set!
 unique_set = {1, 2, 2, 3}
 print(unique_set)  # Output: {1, 2, 3} (duplicate 2 is silently discarded)
 
-# --- 56. LIST POP vs SET POP ---
+# --- 58. LIST POP vs SET POP ---
 # .pop() behaves differently depending on the data structure:
 
 # On a List: Predictable. Removes and returns the LAST item.
@@ -1221,7 +1187,7 @@ print(sample_set)    # Set remaining with that item removed
 # 📅 DAY 29 - 28 October 2026
 # ====================================
 
-# --- 57. SET MATHEMATICAL OPERATIONS ---
+# --- 59. SET MATHEMATICAL OPERATIONS ---
 # Sets support mathematical operations for comparing and combining sets.
 
 set1 = {1, 2, 3}
@@ -1240,7 +1206,7 @@ difference_set = set1 - set2  # {1, 2}
 # Returns elements in either set, but not in both.
 symmetric_difference_set = set1 ^ set2  # {1, 2, 4, 5}
 
-# --- 58. MATHEMATICAL OPERATIONS WITH MULTIPLE SETS ---
+# --- 60. MATHEMATICAL OPERATIONS WITH MULTIPLE SETS ---
 # You can extend operations across more than two sets.
 
 set1 = {1, 2, 3}
@@ -1261,7 +1227,7 @@ difference_result = set_a - set_b - set_c  # {1, 2, 3}
 # Or using method syntax:
 # difference_result = set_a.difference(set_b, set_c)
 
-# --- 59. ESSENTIAL SET REMOVAL METHODS ---
+# --- 61. ESSENTIAL SET REMOVAL METHODS ---
 
 # discard(element): Removes the specified element if it exists.
 # Does NOT raise an error if the element is not found.
@@ -1278,7 +1244,7 @@ my_set.remove(2)  # Removes 2
 my_set = {1, 2, 3}
 my_set.clear()  # Output: set()
 
-# --- 60. CHECKING ELEMENT PRESENCE ---
+# --- 62. CHECKING ELEMENT PRESENCE ---
 # Use 'in' to check membership in O(1) time.
 
 my_set = {1, 2, 3}
@@ -1289,7 +1255,7 @@ print(4 in my_set)  # False
 # 📅 DAY 30 - 29 October 2026
 # ====================================
 
-# --- 61. SUBSETS AND SUPERSETS ---
+# --- 63. SUBSETS AND SUPERSETS ---
 # A subset is a set where all its elements are contained within another set.
 # A superset is a set that contains all the elements of another set.
 
@@ -1320,7 +1286,7 @@ is_proper_superset = set1 > set2  # True
 # 📅 DAY 31 - 01 November 2026
 # ====================================
 
-# --- 62. GUARD CLAUSES ---
+# --- 64. GUARD CLAUSES ---
 # A guard clause is an `if` statement at the very start of a function 
 # that checks for errors or missing data and exits early using `return`.
 # It prevents deep nesting (the "Pyramid of Doom") and keeps code clean.
@@ -1339,47 +1305,6 @@ def check_item(item_exists):
 # - Stops invalid data immediately 
 # - Keeps successful code aligned at the outer indentation level 
 # - Avoids messy, deeply nested `if/else` blocks 
-
-# ====================================
-# 📅 DAY 34 - 07 November 2026
-# ====================================
-
-# --- 68. RETURNING MULTIPLE VALUES WITH TUPLES ---
-# Functions can return multiple values by packaging them into a tuple (separated by commas).
-
-# Example:
-def get_name_and_age():
-    name = "Alice"
-    age = 30
-    return name, age  # Automatically packed into a tuple
-
-# Unpacking the returned tuple into separate variables:
-person_name, person_age = get_name_and_age()
-print(person_name)  # Output: Alice
-print(person_age)   # Output: 30
-
-# Key Points:
-# - When returning multiple items separated by commas, Python packs them into a tuple.
-# - When calling the function, you can unpack the returned tuple directly using multiple assignment.
-
-
-# --- 69. LAMBDA FUNCTIONS ---
-# A lambda function is a small, anonymous function defined using the `lambda` keyword.
-# It can take any number of arguments, but can only contain a single expression.
-# Useful for creating simple, one-line functions without needing the `def` keyword.
-
-# Syntax:
-# lambda arguments: expression
-
-# Example:
-add = lambda x, y: x + y
-result = add(5, 3)
-print(result)  # Output: 8
-
-# Key Points:
-# - Anonymous: It does not have a formal name unless assigned to a variable.
-# - Single Expression: Evaluates and returns the result automatically without a `return` keyword.
-# - Often used in short, throwaway situations or with higher-order functions like map(), filter(), and reduce().
 # ====================================
 # QUICK REVISION
 # ====================================
