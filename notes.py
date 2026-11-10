@@ -1305,6 +1305,95 @@ def check_item(item_exists):
 # - Stops invalid data immediately 
 # - Keeps successful code aligned at the outer indentation level 
 # - Avoids messy, deeply nested `if/else` blocks 
+
+# ====================================
+# 📅 DAY 36 - 03 November 2026
+# ====================================
+
+# --- 71. RECURSION ---
+# A recursive function is a function that calls itself to solve smaller instances of a problem.
+# Every recursive function must have two essential parts:
+# 1. Base Case: Defines when the recursion should stop.
+# 2. Recursive Step: Calls the function itself with a smaller input, bringing it towards the base case.
+
+# Example 1: Factorial
+def factorial(n):
+    if n == 1:  # Base case
+        return 1
+    return n * factorial(n - 1)  # Recursive step
+
+print(factorial(5))  # Output: 120
+
+# Example 2: Recursive String Reversal
+def recursive_reverse(s):
+    if len(s) <= 1:  # Base case: empty or single character
+        return s
+    return recursive_reverse(s[1:]) + s[0]  # Recursive step
+
+text = "hello"
+result = recursive_reverse(text)
+print(result)  # Output: olleh
+
+# ====================================
+# 📅 DAY 37 - 04 November 2026
+# ====================================
+
+# --- 72. ADVANCED SORTING WITH `key=lambda` ---
+# The sorted() function can accept a `key` parameter (often a lambda function) 
+# that extracts a comparison key from each element.
+
+# 1. Sorting by Length:
+names = ["Alice", "Bob", "Charlie", "Diana"]
+sorted_names = sorted(names, key=lambda x: len(x))
+print(sorted_names)  # ['Bob', 'Alice', 'Diana', 'Charlie']
+
+# 2. Sorting Dictionaries by Value:
+grades = {"Alice": 85, "Bob": 90, "Charlie": 78}
+sorted_grades = sorted(grades.items(), key=lambda x: x[1])
+print(sorted_grades)  # [('Charlie', 78), ('Alice', 85), ('Bob', 90)]
+
+# 3. Sorting Numbers by Absolute Value:
+numbers = [-10, 15, -20, 25]
+sorted_numbers = sorted(numbers, key=lambda x: abs(x))
+print(sorted_numbers)  # [-10, 15, -20, 25]
+
+# 4. Sorting Tuples by Multiple Criteria:
+data = [("Alice", 25), ("Bob", 30), ("Charlie", 25)]
+sorted_data = sorted(data, key=lambda x: (x[1], x[0]))
+print(sorted_data)  # [('Alice', 25), ('Charlie', 25), ('Bob', 30)]
+
+# --- 73. CONDITIONAL LOGIC IN LAMBDA FUNCTIONS ---
+# Lambda functions can include conditional logic using ternary operator syntax:
+# Syntax: lambda arguments: value_if_true if condition else value_if_false
+
+is_adult = lambda age: "Adult" if age >= 18 else "Minor"
+print(is_adult(20))  # Adult
+print(is_adult(15))  # Minor
+
+# ====================================
+# 📅 DAY 38 - 10 November 2026
+# ====================================
+
+# --- 74. EXCEPTION HANDLING (`try-except`) ---
+# Exception handling allows programs to catch errors and prevent crashes
+# when unexpected issues occur during execution.
+
+# Syntax:
+# try:
+#     # Code that might cause an exception (risky code)
+# except ExceptionType:
+#     # Code to handle the exception
+
+# Common exception types:
+# - ValueError: Raised when a function receives an appropriate type but inappropriate value.
+# - TypeError: Raised when an operation is applied to an object of inappropriate type.
+# - ZeroDivisionError: Raised when division or modulo by zero happens.
+
+# Example with ValueError:
+try:
+    num = int("abc")  # Raises ValueError
+except ValueError:
+    print("Invalid input! Please enter a number.")
 # ====================================
 # QUICK REVISION
 # ====================================
