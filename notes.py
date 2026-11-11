@@ -1394,38 +1394,4 @@ try:
     num = int("abc")  # Raises ValueError
 except ValueError:
     print("Invalid input! Please enter a number.")
-# ====================================
-# QUICK REVISION
-# ====================================
 
-# Variables and data types
-name = "Pablo"
-age = 21
-is_student = True
-
-# Lists
-names = ["Alice", "Bob", "Charlie"]
-names.append("Diana")
-print(names)
-
-# Tuples
-point = (10, 20)
-
-# Dictionaries
-profile = {"name": "Pablo", "age": 21}
-print(profile["name"])
-
-# Functions
-def square(number):
-    return number * number
-
-print(square(5))  # 25
-
-# Loops
-for i in range(3):
-    print(i)
-
-# F-strings
-print(f"Hello {name}, you are {age} years old.")
-
-# End of notes
