@@ -36,7 +36,6 @@
 # DAY 29 - Set Mathematical Operations, Removal Methods & Membership
 # DAY 30 - Subsets & Supersets
 # DAY 31 - Guard Clauses
-# QUICK REVISION
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
@@ -1395,3 +1394,6 @@ try:
 except ValueError:
     print("Invalid input! Please enter a number.")
 
+# ====================================================
+# APPEND NEW NOTES BELOW THIS LINE
+# ====================================================
