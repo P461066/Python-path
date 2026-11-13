@@ -36,6 +36,9 @@
 # DAY 29 - Set Mathematical Operations, Removal Methods & Membership
 # DAY 30 - Subsets & Supersets
 # DAY 31 - Guard Clauses
+# DAY 36 - Recursion, Lambda Sorting & Basic Exception Handling
+# DAY 39 - filter(), map() & Multiple Exception Blocks
+# QUICK REVISION
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
@@ -1029,9 +1032,9 @@ print(last)   # Output: 5
 # number: The value to round
 # ndigits: Decimal places to keep (optional)
 
-print(round(4.567))     # 5
-print(round(4.567, 2))  # 4.57
-print(round(456.78, -1))  # 460
+print(round(4.567))      # 5
+print(round(4.567, 2))   # 4.57
+print(round(456.78, -1)) # 460
 
 # Python rounds halfway cases to the nearest even number (banker's rounding):
 print(round(2.5))  # 2 (rounds down — 2 is even)
@@ -1309,7 +1312,7 @@ def check_item(item_exists):
 # 📅 DAY 36 - 03 November 2026
 # ====================================
 
-# --- 71. RECURSION ---
+# --- 65. RECURSION ---
 # A recursive function is a function that calls itself to solve smaller instances of a problem.
 # Every recursive function must have two essential parts:
 # 1. Base Case: Defines when the recursion should stop.
@@ -1333,11 +1336,7 @@ text = "hello"
 result = recursive_reverse(text)
 print(result)  # Output: olleh
 
-# ====================================
-# 📅 DAY 37 - 04 November 2026
-# ====================================
-
-# --- 72. ADVANCED SORTING WITH `key=lambda` ---
+# --- 66. ADVANCED SORTING WITH `key=lambda` ---
 # The sorted() function can accept a `key` parameter (often a lambda function) 
 # that extracts a comparison key from each element.
 
@@ -1361,7 +1360,7 @@ data = [("Alice", 25), ("Bob", 30), ("Charlie", 25)]
 sorted_data = sorted(data, key=lambda x: (x[1], x[0]))
 print(sorted_data)  # [('Alice', 25), ('Charlie', 25), ('Bob', 30)]
 
-# --- 73. CONDITIONAL LOGIC IN LAMBDA FUNCTIONS ---
+# --- 67. CONDITIONAL LOGIC IN LAMBDA FUNCTIONS ---
 # Lambda functions can include conditional logic using ternary operator syntax:
 # Syntax: lambda arguments: value_if_true if condition else value_if_false
 
@@ -1373,7 +1372,7 @@ print(is_adult(15))  # Minor
 # 📅 DAY 38 - 10 November 2026
 # ====================================
 
-# --- 74. EXCEPTION HANDLING (`try-except`) ---
+# --- 68. EXCEPTION HANDLING (`try-except`) ---
 # Exception handling allows programs to catch errors and prevent crashes
 # when unexpected issues occur during execution.
 
@@ -1394,6 +1393,86 @@ try:
 except ValueError:
     print("Invalid input! Please enter a number.")
 
-# ====================================================
-# APPEND NEW NOTES BELOW THIS LINE
-# ====================================================
+# ====================================
+# 📅 DAY 39 - 13 November 2026
+# ====================================
+
+# --- 69. filter() FUNCTION ---
+# filter() takes two arguments:
+# 1. A function that returns True/False for each item
+# 2. A sequence of items to filter
+# It keeps only the items where the function returns True.
+
+def is_even(n):
+    return n % 2 == 0
+
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = filter(is_even, numbers)
+print(list(even_numbers))
+# Output: [2, 4, 6]
+
+# Using a lambda function for simple filtering:
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = filter(lambda n: n % 2 == 0, numbers)
+print(list(even_numbers))
+# Output: [2, 4, 6]
+
+# Filter works with any data type:
+words = ["apple", "banana", "cherry", "date"]
+long_words = filter(lambda word: len(word) > 5, words)
+print(list(long_words))
+# Output: ["banana", "cherry"]
+
+# --- 70. map() FUNCTION ---
+# map() applies a function to every item in a sequence and returns the results.
+
+def square(n):
+    return n * n
+
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = map(square, numbers)
+print(list(squared_numbers))
+# Output: [1, 4, 9, 16, 25]
+
+# Using a lambda function with map():
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = map(lambda n: n * n, numbers)
+print(list(squared_numbers))
+# Output: [1, 4, 9, 16, 25]
+
+# Note:
+# map() works with any type of data, not just numbers.
+
+# --- 71. MULTIPLE EXCEPT BLOCKS ---
+# Handle different types of exceptions using multiple `except` blocks.
+
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+    print(result)
+except ValueError:
+    print("That's not a valid number!")
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+
+# Catch multiple exception types in a single `except` block:
+try:
+    # Some code
+    pass
+except (ValueError, TypeError):
+    print("Invalid input type!")
+
+# Rule:
+# Always place more specific exceptions before more general ones
+# in the order of `except` blocks.
+
+# --- 72. try-except BLOCK OVERVIEW ---
+# The try-except block handles exceptions and prevents program crashes.
+# Place risky code in the `try` block and error handling in the `except` block.
+
+try:
+    # Code that might cause an exception
+    pass
+except Exception:
+    # Code to handle the exception
+    pass
