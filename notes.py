@@ -38,7 +38,7 @@
 # DAY 31 - Guard Clauses
 # DAY 36 - Recursion, Lambda Sorting & Basic Exception Handling
 # DAY 39 - filter(), map() & Multiple Exception Blocks
-# QUICK REVISION
+
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
