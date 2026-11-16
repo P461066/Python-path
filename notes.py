@@ -1476,3 +1476,41 @@ try:
 except Exception:
     # Code to handle the exception
     pass
+# ====================================
+# 📅 DAY 40 - 16 November 2026
+# ====================================
+
+# --- 73. OBJECT-ORIENTED PROGRAMMING (OOP) ---
+# Object-Oriented Programming (OOP) organizes code around objects
+# that contain both data (attributes) and functions (methods).
+
+# Real-life analogy:
+# A class is like a blueprint, and an object is what you build from that blueprint.
+
+# --- 74. CREATING A CLASS ---
+# Create a class using the  keyword (class names use PascalCase):
+
+class Car:
+    pass  # placeholder that does nothing
+
+# --- 75. IMPORTING A CLASS ---
+# You can store a class in its own module (e.g., car.py) and import it:
+
+# from car import Car
+
+# --- 76. CREATING AN OBJECT (INSTANTIATION) ---
+# Create an object from a class by calling the class name with parentheses:
+
+my_car = Car()
+
+# --- 77. CHECKING AN OBJECT'S TYPE ---
+# Use type() to check which class an object belongs to:
+
+print(type(my_car))
+# Output: <class '__main__.Car'>  (or <class 'car.Car'> if imported from car.py)
+
+# Key Takeaways:
+# -  defines the blueprint.
+# -  acts as a temporary empty body so Python doesn't throw an IndentationError.
+# -  creates an individual object (instance) from the blueprint.
+# -  shows the class an object was built from.
