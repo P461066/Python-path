@@ -28,7 +28,7 @@
 # DAY 21 - F-Strings & Formatting
 # DAY 22 - Dictionaries & Nested Dictionaries
 # DAY 23 - Constants & Multiple Assignment
-# DAY 24 - Sets, List Comprehensions, Dictionary Review & Practice
+# DAY 24 - Sets, List Comprehensions & Dictionary Review
 # DAY 25 - Placeholders, round() & list()
 # DAY 26 - Ternary Operators & Practice Challenge
 # DAY 27 - Indentation Errors
@@ -36,9 +36,11 @@
 # DAY 29 - Set Mathematical Operations, Removal Methods & Membership
 # DAY 30 - Subsets & Supersets
 # DAY 31 - Guard Clauses
-# DAY 36 - Recursion, Lambda Sorting & Basic Exception Handling
+# DAY 36 - Recursion, Lambda Sorting & Conditional Lambdas
+# DAY 38 - Exception Handling
 # DAY 39 - filter(), map() & Multiple Exception Blocks
-
+# DAY 40 - Object-Oriented Programming & Creating a Class
+# DAY 41 - Classes, Objects, Attributes & Importing Classes
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
