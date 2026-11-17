@@ -1504,7 +1504,48 @@ class Car:
 my_car = Car()
 
 # --- 77. CHECKING AN OBJECT'S TYPE ---
-# Use type() to check which class an object belongs to:
+# Use type() to check which class an object belongs to:# ====================================
+# 📅 DAY 41 - 17 November 2026
+# ====================================
+
+# --- 73. CLASSES AND OBJECTS ---
+# A class is a blueprint that defines shared attributes and behaviors.
+# An object is an instance created from that class with individual properties.
+
+# --- 74. DEFINING A CLASS & CLASS ATTRIBUTES ---
+# Class attributes are shared by all instances of the class.
+
+class Dog:
+    # Class attribute - shared by all instances
+    species = "Canis familiaris"
+
+# Accessing a class attribute directly from the class:
+print(Dog.species)  # Canis familiaris
+
+# --- 75. CREATING OBJECTS (INSTANCES) ---
+# Call the class with parentheses to create individual instances.
+
+dog1 = Dog()
+dog2 = Dog()
+
+# --- 76. INSTANCE ATTRIBUTES (INDIVIDUAL PROPERTIES) ---
+# Attach attributes directly to each object so each instance has its own data.
+
+dog1.name = "Nicky"
+dog1.breed = "Siberian Husky"
+
+dog2.name = "Teemon"
+dog2.breed = "Shu'ali"
+
+# --- 77. ACCESSING INSTANCE & CLASS ATTRIBUTES ---
+# Objects can read both their own instance attributes and shared class attributes.
+
+print(f"{dog1.name} is a {dog1.breed}")  # Individual attributes -> Nicky is a Siberian Husky
+print(f"Species: {Dog.species}")        # Class attribute -> Species: Canis familiaris
+
+# --- 78. IMPORTING A CLASS FROM ANOTHER FILE ---
+# To use a class defined in another Python file (e.g., dog.py):
+# from dog import Dog
 
 print(type(my_car))
 # Output: <class '__main__.Car'>  (or <class 'car.Car'> if imported from car.py)
@@ -1514,3 +1555,4 @@ print(type(my_car))
 # -  acts as a temporary empty body so Python doesn't throw an IndentationError.
 # -  creates an individual object (instance) from the blueprint.
 # -  shows the class an object was built from.
+
