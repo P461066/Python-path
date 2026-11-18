@@ -1506,7 +1506,8 @@ class Car:
 my_car = Car()
 
 # --- 77. CHECKING AN OBJECT'S TYPE ---
-# Use type() to check which class an object belongs to:# ====================================
+# Use type() to check which class an object belongs to:
+# ====================================
 # 📅 DAY 41 - 17 November 2026
 # ====================================
 
@@ -1557,7 +1558,7 @@ print(type(my_car))
 # -  acts as a temporary empty body so Python doesn't throw an IndentationError.
 # -  creates an individual object (instance) from the blueprint.
 # -  shows the class an object was built from.
-
+# ====================================
 # 📅 DAY 42 - 18 November 2026
 # ====================================
 
