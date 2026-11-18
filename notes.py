@@ -41,6 +41,8 @@
 # DAY 39 - filter(), map() & Multiple Exception Blocks
 # DAY 40 - Object-Oriented Programming & Creating a Class
 # DAY 41 - Classes, Objects, Attributes & Importing Classes
+# DAY 42 - Constructors (__init__) & Instance Methods
+
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
