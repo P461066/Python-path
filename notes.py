@@ -1558,3 +1558,37 @@ print(type(my_car))
 # -  creates an individual object (instance) from the blueprint.
 # -  shows the class an object was built from.
 
+# 📅 DAY 42 - 18 November 2026
+# ====================================
+
+# --- 79. DEFINING METHODS IN A CLASS ---
+# Methods are functions defined inside a class that specify what objects can do.
+
+class Calculator:
+    def greet(self):
+        print("Hello! I am a calculator.")
+
+    def add(self, a, b):
+        return a + b
+
+    def multiply(self, a, b):
+        result = a * b
+        print(f"{x} x {y} = {result}")
+        return result
+
+# --- 80. CREATING OBJECTS AND CALLING METHODS ---
+# Instantiate the class and call its methods using dot notation.
+
+my_calc = Calculator()
+my_calc.greet()
+
+sum_result = my_calc.add(5, 3)
+product = my_calc.multiply(4, 7)
+
+# --- 81. KEY RULES ABOUT METHODS & `self` ---
+# - Take parameters: add(self, a, b)
+# - Return values: return a + b
+# - Print output: print("Hello!")
+# - Do both printing and returning depending on your needs.
+# - `self`: Always include `self` as the first parameter in method definitions, 
+#   but do NOT pass it when calling the method (Python passes it automatically). 
