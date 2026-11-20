@@ -39,10 +39,9 @@
 # DAY 36 - Recursion, Lambda Sorting & Conditional Lambdas
 # DAY 38 - Exception Handling
 # DAY 39 - filter(), map() & Multiple Exception Blocks
-# DAY 40 - Object-Oriented Programming & Creating a Class
-# DAY 41 - Classes, Objects, Attributes & Importing Classes
-# DAY 42 - Constructors (__init__) & Instance Methods
-# DAY 43 - Constructors (__init__), Class vs. Instance Attributes, @classmethod, @staticmethod, Decorators & @property
+# DAY 40 - OOP Foundations: Classes, Objects, Attributes & Modules
+# DAY 41 - Constructors (__init__), Methods & Stateful Objects
+# DAY 42 - Classmethods, Staticmethods, Decorators & @property
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
@@ -1481,175 +1480,93 @@ except Exception:
     # Code to handle the exception
     pass
 # ====================================
-# 📅 DAY 40 - 16 November 2026
+# 📅 DAY 40 - 16–17 November 2026
 # ====================================
 
-# --- 73. OBJECT-ORIENTED PROGRAMMING (OOP) ---
+# --- 73. OOP FOUNDATIONS: CLASSES, OBJECTS & MODULES ---
 # Object-Oriented Programming (OOP) organizes code around objects
-# that contain both data (attributes) and functions (methods).
-
-# Real-life analogy:
-# A class is like a blueprint, and an object is what you build from that blueprint.
-
-# --- 74. CREATING A CLASS ---
-# Create a class using the  keyword (class names use PascalCase):
+# that combine data (attributes) and behaviors (methods).
+# Analogy: A class is the blueprint; an object (instance) is built from it.
+# Class names use PascalCase. You can also import a class from another file.
 
 class Car:
-    pass  # placeholder that does nothing
-
-# --- 75. IMPORTING A CLASS ---
-# You can store a class in its own module (e.g., car.py) and import it:
-
-# from car import Car
-
-# --- 76. CREATING AN OBJECT (INSTANTIATION) ---
-# Create an object from a class by calling the class name with parentheses:
+    pass  # placeholder body so Python doesn't raise an IndentationError
 
 my_car = Car()
+print(type(my_car))  # <class '__main__.Car'>
 
-# --- 77. CHECKING AN OBJECT'S TYPE ---
-# Use type() to check which class an object belongs to:
-# ====================================
-# 📅 DAY 41 - 17 November 2026
-# ====================================
+# Importing a class from another module (e.g., car.py):
+# from car import Car
 
-# --- 73. CLASSES AND OBJECTS ---
-# A class is a blueprint that defines shared attributes and behaviors.
-# An object is an instance created from that class with individual properties.
-
-# --- 74. DEFINING A CLASS & CLASS ATTRIBUTES ---
-# Class attributes are shared by all instances of the class.
+# --- 74. CLASS ATTRIBUTES vs. INSTANCE ATTRIBUTES ---
+# Class attributes are defined on the class and shared by instances.
+# Instance attributes hold data specific to an individual object.
 
 class Dog:
-    # Class attribute - shared by all instances
-    species = "Canis familiaris"
+    species = "Canis familiaris"  # Class attribute (shared)
 
-# Accessing a class attribute directly from the class:
 print(Dog.species)  # Canis familiaris
-
-# --- 75. CREATING OBJECTS (INSTANCES) ---
-# Call the class with parentheses to create individual instances.
 
 dog1 = Dog()
 dog2 = Dog()
 
-# --- 76. INSTANCE ATTRIBUTES (INDIVIDUAL PROPERTIES) ---
-# Attach attributes directly to each object so each instance has its own data.
-
+# Setting attributes directly on instances:
 dog1.name = "Nicky"
 dog1.breed = "Siberian Husky"
 
 dog2.name = "Teemon"
 dog2.breed = "Shu'ali"
 
-# --- 77. ACCESSING INSTANCE & CLASS ATTRIBUTES ---
-# Objects can read both their own instance attributes and shared class attributes.
+print(f"{dog1.name} is a {dog1.breed}")  # Nicky is a Siberian Husky
+print(f"Species: {Dog.species}")        # Species: Canis familiaris
 
-print(f"{dog1.name} is a {dog1.breed}")  # Individual attributes -> Nicky is a Siberian Husky
-print(f"Species: {Dog.species}")        # Class attribute -> Species: Canis familiaris
+class School:
+    school_name = "Python Academy"
 
-# --- 78. IMPORTING A CLASS FROM ANOTHER FILE ---
-# To use a class defined in another Python file (e.g., dog.py):
-# from dog import Dog
+    def __init__(self, student_name):
+        self.student_name = student_name  # Instance attribute
 
-print(type(my_car))
-# Output: <class '__main__.Car'>  (or <class 'car.Car'> if imported from car.py)
+s1 = School("Alice")
+s2 = School("Bob")
 
-# Key Takeaways:
-# -  defines the blueprint.
-# -  acts as a temporary empty body so Python doesn't throw an IndentationError.
-# -  creates an individual object (instance) from the blueprint.
-# -  shows the class an object was built from.
-# ====================================
-# 📅 DAY 42 - 18 November 2026
-# ====================================
-
-# --- 79. DEFINING METHODS IN A CLASS ---
-# Methods are functions defined inside a class that specify what objects can do.
-
-class Calculator:
-    def greet(self):
-        print("Hello! I am a calculator.")
-
-    def add(self, a, b):
-        return a + b
-
-    def multiply(self, a, b):
-        result = a * b
-        print(f"{x} x {y} = {result}")
-        return result
-
-# --- 80. CREATING OBJECTS AND CALLING METHODS ---
-# Instantiate the class and call its methods using dot notation.
-
-my_calc = Calculator()
-my_calc.greet()
-
-sum_result = my_calc.add(5, 3)
-product = my_calc.multiply(4, 7)
-
-# --- 81. KEY RULES ABOUT METHODS & `self` ---
-# - Take parameters: add(self, a, b)
-# - Return values: return a + b
-# - Print output: print("Hello!")
-# - Do both printing and returning depending on your needs.
-# - `self`: Always include `self` as the first parameter in method definitions, 
-#   but do NOT pass it when calling the method (Python passes it automatically). 
+# Updating the class attribute updates it for instances that haven't overridden it:
+School.school_name = "Python High School"
+print(s1.school_name)  # Python High School
 
 # ====================================
-# 📅 DAY 43 - 20 November 2026
+# 📅 DAY 41 - 18 & 20 November 2026
 # ====================================
 
-# --- 82. CLASS ATTRIBUTES vs. INSTANCE ATTRIBUTES ---
-# Class attributes are shared across all objects of the class.
-# Instance attributes belong to a specific object (usually set on `self`).
-
-class Student:
-    school_name = "Python Academy"  # Class attribute (shared)
-
-    def __init__(self, name, grade=None):
-        self.name = name            # Instance attribute (unique per object)
-        self.grade = grade
-
-alice = Student("Alice", "A")
-bob = Student("Bob", "B")
-
-print(alice.name)         # Alice
-print(bob.name)           # Bob
-print(alice.school_name)  # Python Academy
-print(Student.school_name)# Python Academy
-
-# Changing a class attribute on the class updates it for instances that don't override it:
-Student.school_name = "Python High School"
-print(alice.school_name)  # Python High School
-
-# Adding/setting an attribute directly on one instance only affects that instance:
-alice.age = 16
-print(alice.age)          # 16
-
-# --- 83. THE `__init__` CONSTRUCTOR & DEFAULT PARAMETERS ---
-# `__init__` runs automatically when creating a new object to initialize its attributes.
-# Parameters can have default values (just like regular functions).
-
-class Dog:
-    def __init__(self, name, breed):
-        self.name = name
-        self.breed = breed
+# --- 75. CONSTRUCTORS (`__init__`), DEFAULT PARAMETERS & METHODS ---
+# `__init__` runs automatically when creating an object to set initial state.
+# Methods are functions inside a class; `self` refers to the current instance
+# (Python passes `self` automatically when calling `obj.method()`).
 
 class Cat:
     def __init__(self, name, age=1):
         self.name = name
         self.age = age
 
-rex = Dog("Rex", "German Shepherd")
-print(rex.name)   # Rex
-print(rex.breed)  # German Shepherd
+    def greet(self):
+        print(f"Meow, I am {self.name} ({self.age}).")
+
+    def add(self, a, b):
+        return a + b
+
+    def multiply(self, a, b):
+        result = a * b
+        print(f"{a} x {b} = {result}")
+        return result
 
 fluffy = Cat("Fluffy", 3)
-whiskers = Cat("Whiskers")  # age defaults to 1
+whiskers = Cat("Whiskers")  # Uses default age=1
 
-# --- 84. STATEFUL METHODS IN A CLASS ---
-# Methods can read and update `self` attributes across multiple calls.
+whiskers.greet()
+print(whiskers.add(5, 3))       # 8
+print(whiskers.multiply(4, 7))  # 28
+
+# --- 76. STATEFUL OBJECTS ---
+# Methods can read and update attributes stored on `self` across calls.
 
 class Calculator:
     def __init__(self):
@@ -1681,15 +1598,19 @@ class Calculator:
         return self.result
 
 calc = Calculator()
-calc.add(5)         # result becomes 5
-calc.multiply(3)    # result becomes 15
-calc.divide(0)      # prints Error: Division by zero
+calc.add(5)         # 5
+calc.multiply(3)    # 15
+calc.divide(0)      # Error: Division by zero
 
-# --- 85. `@classmethod` AND `@staticmethod` ---
-# @classmethod receives `cls` (the class itself) as its first argument.
-#   Useful for reading/updating class attributes or creating alternative constructors.
-# @staticmethod receives neither `self` nor `cls`.
-#   Useful for helper logic related to the class that doesn't need instance/class state.
+# ====================================
+# 📅 DAY 42 - 20 November 2026
+# ====================================
+
+# --- 77. `@classmethod` AND `@staticmethod` ---
+# `@classmethod` takes `cls` (the class) as its first argument.
+#   Good for class-level state or alternative constructors.
+# `@staticmethod` takes neither `self` nor `cls`.
+#   Good for standalone helper functions grouped inside a class.
 
 class SchoolStudent:
     school_name = "Python Academy"
@@ -1719,13 +1640,13 @@ class MathHelper:
 info = SchoolStudent.get_school_info()
 guest = SchoolStudent.create_guest_student()
 
-print(MathHelper.add(5, 3))       # 8
-print(MathHelper.is_even(10))     # True
+print(MathHelper.add(5, 3))    # 8
+print(MathHelper.is_even(10))  # True
 
-# --- 86. DECORATORS (`@`) ---
-# A decorator wraps/modifies a function's behavior without changing its core code.
-# `@my_decorator` above `def say_hello():` is shorthand for:
-# say_hello = my_decorator(say_hello)
+# --- 78. DECORATORS (`@`) AND `@property` ---
+# A decorator wraps a function to add behavior without changing its core code.
+# `@property` exposes a method as an attribute (no parentheses);
+# `@<prop>.setter` validates/controls assignment (store internal data in e.g. `self._age`).
 
 def my_decorator(func):
     def wrapper():
@@ -1740,16 +1661,10 @@ def say_hello():
 
 say_hello()
 
-# --- 87. `@property`, SETTERS & COMPUTED PROPERTIES ---
-# `@property` lets you access a method like an attribute (no parentheses).
-# `@<prop>.setter` runs validation/logic when assigning a value to that property.
-# Use a leading underscore attribute (like `self._age`) internally to avoid infinite recursion.
-# Properties can also compute values dynamically from other attributes.
-
 class Person:
     def __init__(self, name, age):
         self.name = name
-        self.age = age  # calls the @age.setter below
+        self.age = age  # Triggers @age.setter
 
     @property
     def age(self):
@@ -1772,7 +1687,7 @@ class Rectangle:
 
 person = Person("Alice", 30)
 print(person.age)   # 30
-person.age = 31     # uses setter
+person.age = 31     # Uses setter
 print(person.age)   # 31
 
 rect = Rectangle(5, 3)
