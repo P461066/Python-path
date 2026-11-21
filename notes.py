@@ -42,6 +42,7 @@
 # DAY 40 - OOP Foundations: Classes, Objects, Attributes & Modules
 # DAY 41 - Constructors (__init__), Methods & Stateful Objects
 # DAY 42 - Classmethods, Staticmethods, Decorators & @property
+# DAY 43 - Encapsulation, Underscore Conventions (_ vs. __), Getters/Setters & Name Mangling
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
