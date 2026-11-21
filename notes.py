@@ -1693,3 +1693,52 @@ print(person.age)   # 31
 
 rect = Rectangle(5, 3)
 print(rect.area)    # 15 (computed property)
+
+# ====================================
+# 📅 DAY 43 - 21 November 2026
+# ====================================
+
+# --- 79. ENCAPSULATION & UNDERSCORE CONVENTIONS (`_attr` vs. `__attr`) ---
+# Underscores signal that an attribute is meant for internal/protected use
+# rather than direct access from outside the class:
+# - Single underscore (`_attribute`): convention for "protected" / internal use.
+# - Double underscore (`__attribute`): "private" attribute that triggers name mangling
+#   (Python renames it internally to `_ClassName__attribute`).
+
+class PersonProtected:
+    def __init__(self, name, age):
+        self._name = name  # "protected" - internal use
+        self._age = age    # "protected" - internal use
+
+# --- 80. GETTER & SETTER ACCESSOR METHODS ---
+# Accessor methods (`get_...` / `set_...`) control how internal attributes
+# are read or updated (for example, validating values before saving).
+
+class Person:
+    def __init__(self, name, age):
+        self.__name = name  # "private" - gets name mangled
+        self.__age = age    # "private" - gets name mangled
+
+    def get_name(self):
+        return self.__name
+
+    def set_age(self, age):
+        if age >= 0:
+            self.__age = age
+        else:
+            print("Age must be positive!")
+
+person = Person("Bob", 25)
+print(person.get_name())  # Bob
+person.set_age(30)
+person.set_age(-5)        # Age must be positive!
+
+# --- 81. NAME MANGLING WITH DOUBLE UNDERSCORES ---
+# Direct access using `person.__name` raises an AttributeError because of name mangling,
+# though `_Person__name` still exists under the hood (discouraged in practice).
+
+# This doesn't work:
+# print(person.__name)  # AttributeError
+
+# This works (discouraged):
+# print(person._Person__name)  # Bob
