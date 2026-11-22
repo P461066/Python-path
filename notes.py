@@ -1743,3 +1743,67 @@ person.set_age(-5)        # Age must be positive!
 
 # This works (discouraged):
 # print(person._Person__name)  # Bob
+
+# ====================================
+# 📅 DAY 44 - 22 November 2026
+# ====================================
+
+# --- 82. INHERITANCE (`class Child(Parent):`) ---
+# Inheritance allows a child class to inherit attributes and methods
+# from a parent class using `class Child(Parent):` syntax.
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def info(self):
+        print(f"I am {self.name}, an animal")
+
+# Child class inheriting everything from Animal:
+class DogInherited(Animal):
+    pass
+
+buddy = DogInherited("Buddy")
+buddy.info()  # Output: I am Buddy, an animal
+
+# Adding new methods to a child class while keeping inherited ones:
+class DogWithBark(Animal):
+    def bark(self):
+        print(f"{self.name} says Woof!")
+
+dog_bark = DogWithBark("Buddy")
+dog_bark.info()  # Inherited method
+dog_bark.bark()  # New child method
+
+# --- 83. USING `super()` IN CONSTRUCTORS (`__init__`) ---
+# `super()` lets a child class call methods from its parent class,
+# extending functionality instead of replacing it.
+
+class AnimalWithSuper:
+    def __init__(self, name):
+        self.name = name
+
+class DogWithBreed(AnimalWithSuper):
+    def __init__(self, name, breed):
+        super().__init__(name)  # Call parent's __init__
+        self.breed = breed
+
+# --- 84. USING `super()` TO EXTEND METHODS ---
+# Calling `super().method_name()` inside an overridden method keeps the parent
+# behavior and adds extra child-specific behavior.
+# Without `super()`, a child method completely replaces the parent's method.
+
+class SoundAnimal:
+    def make_sound(self):
+        print("Generic animal sound")
+
+class SoundDog(SoundAnimal):
+    def make_sound(self):
+        super().make_sound()  # Call parent's method
+        print("Woof!")        # Add child-specific behavior
+
+sound_dog = SoundDog()
+sound_dog.make_sound()
+# Output:
+# Generic animal sound
+# Woof!
