@@ -1808,3 +1808,86 @@ sound_dog.make_sound()
 # Output:
 # Generic animal sound
 # Woof!
+
+# ====================================
+# 📅 DAY 45 - 23 November 2026
+# ====================================
+
+# --- 85. METHOD OVERRIDING ---
+# Method overriding lets a child class provide its own implementation
+# of a method that already exists in the parent class.
+# The child's version replaces that method for child instances,
+# while other inherited methods remain unchanged unless overridden too.
+
+class BaseAnimal:
+    def __init__(self, name):
+        self.name = name
+
+    def make_sound(self):
+        print("Some generic animal sound")
+
+    def info(self):
+        print(f"I am {self.name}")
+
+class OverridingDog(BaseAnimal):
+    def make_sound(self):
+        print("Woof! Woof!")  # Overrides BaseAnimal.make_sound()
+
+class OverridingCat(BaseAnimal):
+    def make_sound(self):
+        print("Meow!")
+
+    def info(self):
+        print(f"I am {self.name}, a sneaky cat")
+
+# --- 86. USING `super()` IN CONSTRUCTORS & METHODS ---
+# `super()` lets a child class call a parent's constructor or method
+# so it can extend behavior instead of completely replacing it.
+# Without `super()`, defining the same method in the child replaces the parent's version.
+
+class ParentPet:
+    def __init__(self, name):
+        self.name = name
+
+    def make_sound(self):
+        print("Generic pet sound")
+
+class ChildPuppy(ParentPet):
+    def __init__(self, name, breed):
+        super().__init__(name)  # Calls ParentPet.__init__
+        self.breed = breed
+
+    def make_sound(self):
+        super().make_sound()    # Calls ParentPet.make_sound first
+        print("Woof!")          # Adds child-specific behavior
+
+# --- 87. MULTIPLE INHERITANCE & MRO (`__mro__`) ---
+# Multiple inheritance lets a child class inherit from more than one parent
+# using `class Child(Parent1, Parent2):`.
+# Check `Child.__mro__` (Method Resolution Order) to see the order Python
+# searches parent classes when looking up attributes or methods.
+
+class LivingAnimal:
+    def __init__(self, name):
+        self.name = name
+
+    def eat(self):
+        return f"{self.name} is eating"
+
+class Flyable:
+    def fly(self):
+        return f"{self.name} is flying"
+
+class Bird(LivingAnimal, Flyable):
+    def __init__(self, name, species):
+        super().__init__(name)  # Calls LivingAnimal.__init__
+        self.species = species
+
+    def sing(self):
+        return f"{self.name} is singing"
+
+sparrow = Bird("Sparrow", "House sparrow")
+print(sparrow.eat())   # From LivingAnimal
+print(sparrow.fly())   # From Flyable
+print(sparrow.sing())  # From Bird
+print(Bird.__mro__)    # Shows Method Resolution Order
