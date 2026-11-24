@@ -1892,3 +1892,40 @@ print(sparrow.eat())   # From LivingAnimal
 print(sparrow.fly())   # From Flyable
 print(sparrow.sing())  # From Bird
 print(Bird.__mro__)    # Shows Method Resolution Order
+
+# ====================================
+# 📅 DAY 46 - 24 November 2026
+# ====================================
+
+# --- 88. POLYMORPHISM ---
+# Polymorphism ("many forms") allows objects of different classes
+# to respond differently to the exact same method call through method overriding.
+# It lets you treat different objects the same way through a common interface,
+# making code more flexible and easier to extend.
+
+class PolyAnimal:
+    def speak(self):
+        return "Animal makes a sound"
+
+class PolyDog(PolyAnimal):
+    def speak(self):
+        return "Woof!"
+
+class PolyCat(PolyAnimal):
+    def speak(self):
+        return "Meow!"
+
+# --- 89. POLYMORPHISM WITH LOOPS & FUNCTIONS ---
+# Because all these classes share the same `.speak()` interface,
+# you can loop over mixed objects or pass them into a single function
+# without checking what class each object belongs to.
+
+animals = [PolyDog(), PolyCat(), PolyAnimal()]
+for animal in animals:
+    print(animal.speak())  # Each prints its own overridden version
+
+def make_animal_speak(animal):
+    print(animal.speak())
+
+make_animal_speak(PolyDog())  # Woof!
+make_animal_speak(PolyCat())  # Meow!
