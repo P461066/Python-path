@@ -45,6 +45,7 @@
 # DAY 43 - Encapsulation, Underscore Conventions (_ vs. __), Getters/Setters & Name Mangling
 # DAY 44 - Inheritance (`class Child(Parent):`) & `super()`
 # DAY 45 - Method Overriding, `super()` & Multiple Inheritance (`__mro__`)
+# DAY 46 - Polymorphism (Method Overriding & Common Interfaces)
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
