@@ -1930,3 +1930,75 @@ def make_animal_speak(animal):
 
 make_animal_speak(PolyDog())  # Woof!
 make_animal_speak(PolyCat())  # Meow!
+
+# ====================================
+# 📅 DAY 47 - 25 November 2026
+# ====================================
+
+# --- 90. DUCK TYPING ---
+# Duck typing focuses on what an object CAN DO (its methods/behavior),
+# not what class it belongs to. It enables polymorphism without requiring
+# inheritance from a shared parent class.
+# If an object has the methods your function calls, it works—even if
+# unrelated classes implement those methods in their own way.
+
+class Duck:
+    def swim(self):
+        return "Duck swimming"
+
+    def quack(self):
+        return "Quack!"
+
+class Person:
+    def swim(self):
+        return "Person swimming"
+
+    def quack(self):
+        return "Person imitating a duck: Quack!"
+
+def make_it_swim_and_quack(duck_like_object):
+    print(duck_like_object.swim())
+    print(duck_like_object.quack())
+
+# Works with any object that has swim() and quack()
+make_it_swim_and_quack(Duck())
+make_it_swim_and_quack(Person())
+
+# --- 91. ABSTRACT BASE CLASSES (`ABC` & `@abstractmethod`) ---
+# An abstract class acts as a blueprint/template that subclasses must follow.
+# Import `ABC` and `abstractmethod` from the `abc` module.
+# - `@abstractmethod` marks methods that subclasses MUST implement.
+# - Subclasses that leave an `@abstractmethod` unimplemented stay abstract too.
+# - Concrete (regular) methods on the abstract class can still have full code
+#   that subclasses inherit directly.
+# - You CANNOT instantiate an abstract class directly (raises TypeError).
+
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+    @abstractmethod
+    def perimeter(self):
+        pass
+
+    def describe(self):
+        return "This is a shape"  # Concrete method (has implementation)
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+
+    def perimeter(self):
+        return 2 * 3.14 * self.radius
+
+# shape = Shape()  # TypeError: Can't instantiate abstract class
+
+circle = Circle(5)
+print(circle.area())      # 78.5
+print(circle.describe())  # Inherited concrete method
