@@ -46,6 +46,7 @@
 # DAY 44 - Inheritance (`class Child(Parent):`) & `super()`
 # DAY 45 - Method Overriding, `super()` & Multiple Inheritance (`__mro__`)
 # DAY 46 - Polymorphism (Method Overriding & Common Interfaces)
+# DAY 47 - Duck Typing & Abstract Base Classes (`ABC` & `@abstractmethod`)
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
