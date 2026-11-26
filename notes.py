@@ -2003,3 +2003,72 @@ class Circle(Shape):
 circle = Circle(5)
 print(circle.area())      # 78.5
 print(circle.describe())  # Inherited concrete method
+
+# ====================================
+# 📅 DAY 48 - 26 November 2026
+# ====================================
+
+# --- 92. INFORMATION HIDING & CONTROLLED ACCESS ---
+# Information hiding restricts direct access to an object's internal data
+# and exposes controlled access through public methods (getters/setters/actions).
+# Python uses naming conventions (underscores) for three access control levels:
+#   - `public` (no prefix): Accessible anywhere (inside, subclasses, outside).
+#   - `_protected` (single underscore): Intended for internal use within the class
+#     and its subclasses. Still works outside, though discouraged by convention.
+#   - `__private` (double underscore): Intended for class-only access. Python
+#     applies "name mangling" (`_ClassName__member`) to prevent accidental access
+#     from outside or subclasses.
+
+class BankAccountControlled:
+    def __init__(self, owner, initial_balance):
+        self.owner = owner                      # Public attribute
+        self._balance = initial_balance         # Protected attribute
+        self.__account_number = "ACC123456"     # Private attribute
+
+    def get_balance(self):
+        return self._balance
+
+    def deposit(self, amount):
+        if amount > 0:
+            self._balance += amount
+            return True
+        return False
+
+# Private attributes are name-mangled (`_ClassName__attr`), so direct
+# `account.__account_number` raises an AttributeError, though Python still allows:
+# print(account._BankAccountControlled__account_number)  # Violates information hiding
+
+# --- 93. ACCESS LEVELS IN ACTION & SUBCLASSES ---
+# - Public (`self.name`): Read/called freely anywhere.
+# - Protected (`self._salary` / `self._balance`): Accessible inside the class
+#   and inside subclasses (e.g., `SavingsAccount(BankAccount)`), discouraged outside.
+# - Private (`self.__password` / `self.__account_id`): Only accessible directly
+#   inside the defining class (`BankAccount` or `User`), NOT directly in subclasses.
+
+class BankAccount:
+    def __init__(self, owner, balance, account_id):
+        self.owner = owner                  # Public
+        self._balance = balance             # Protected
+        self.__account_id = account_id      # Private
+
+    def deposit(self, amount):              # Public method
+        self._balance += amount
+
+    def _calculate_interest(self):          # Protected method
+        return self._balance * 0.02
+
+    def __validate_transaction(self, amount):  # Private method
+        return amount > 0 and amount <= self._balance
+
+class SavingsAccount(BankAccount):
+    def show_balance(self):
+        return self._balance                # Protected - works in subclass
+
+    def show_id(self):
+        # return self.__account_id          # Private - AttributeError in subclass
+        return "Cannot access private member"
+
+account = BankAccount("Alice", 1000, "12345")
+print(account.owner)                        # Public access -> Works fine
+print(account._balance)                     # Protected access -> Works, not recommended
+print(account._BankAccount__account_id)     # Name-mangled access -> 12345
