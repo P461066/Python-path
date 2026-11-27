@@ -48,6 +48,8 @@
 # DAY 46 - Polymorphism (Method Overriding & Common Interfaces)
 # DAY 47 - Duck Typing & Abstract Base Classes (`ABC` & `@abstractmethod`)
 # DAY 48 - Information Hiding, Access Control (`_protected`, `__private`) & Name Mangling
+# DAY 49 - Magic / Dunder Methods (`__init__`, `__str__`, `__len__`)
+
 
 # ====================================
 # 📅 DAY 1 - 08 September 2026
@@ -2072,3 +2074,5 @@ account = BankAccount("Alice", 1000, "12345")
 print(account.owner)                        # Public access -> Works fine
 print(account._balance)                     # Protected access -> Works, not recommended
 print(account._BankAccount__account_id)     # Name-mangled access -> 12345
+
+
