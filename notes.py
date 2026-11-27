@@ -2076,3 +2076,33 @@ print(account._balance)                     # Protected access -> Works, not rec
 print(account._BankAccount__account_id)     # Name-mangled access -> 12345
 
 
+# ====================================
+# 📅 DAY 49 - 27 November 2026
+# ====================================
+
+# --- 94. MAGIC / DUNDER METHODS (`__init__`, `__str__`, `__len__`) ---
+# Magic methods ("dunder" = double underscore) are special built-in methods
+# that Python calls automatically in response to certain operations or
+# built-in functions—you don't normally call them directly by name.
+# Common ones:
+#   - `__init__`: Runs automatically when creating a new object to set up attributes.
+#   - `__str__`: Runs automatically when converting an object to a string via
+#     `str(obj)` or `print(obj)`. Without `__str__`, `print(obj)` shows a
+#     raw memory address instead of readable text.
+#   - `__len__`: Runs automatically when calling `len(obj)` on an object.
+
+class MagicBook:
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+
+    def __str__(self):
+        return f"{self.title} by {self.author}"
+
+    def __len__(self):
+        return self.pages
+
+my_book = MagicBook("Python Programming", "John Smith", 350)
+print(my_book)       # Calls __str__ automatically -> Python Programming by John Smith
+print(len(my_book))  # Calls __len__ automatically -> 350
